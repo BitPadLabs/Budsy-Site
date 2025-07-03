@@ -4,16 +4,13 @@ title: Privacy Policy
 permalink: /privacy/
 ---
 
-<div class="page-container">
-<div class="content-wrapper">
-
 # Privacy Policy
 
-**Last updated: {{ "now" | date: "%B %d, %Y" }}**
+**Last updated: July 03, 2025**
 
 ## 1. Introduction
 
-{{ site.company_name }} ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use Budsy ("the App").
+Budsy App ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use Budsy ("the App").
 
 ## 2. Information We Collect
 
@@ -177,6 +174,3 @@ If you have any questions, concerns, or requests regarding this Privacy Policy o
 ---
 
 *This Privacy Policy is effective as of the date listed above and governs your use of Budsy. By using the App, you consent to the collection and use of information as described in this policy.*
-
-</div>
-</div>

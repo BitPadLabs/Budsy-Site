@@ -3,7 +3,7 @@
 
   {%- include head.html -%}
 
-  <body>
+  <body class="{% if page.title == 'Terms of Service' %}page-terms{% elsif page.title == 'Privacy Policy' %}page-privacy{% else %}page-default{% endif %}">
 
     {%- include header.html -%}
 
