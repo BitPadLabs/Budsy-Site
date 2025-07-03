@@ -69,15 +69,25 @@ body {
   width: 100%;
 }
 
+.site-nav {
+  float: none;
+  line-height: inherit;
+}
+
 .header-logo-container {
   display: flex;
   align-items: center;
 }
 
 .header-logo {
-  height: 60px;
+  height: 80px;
   width: auto;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+  transform: scale(1.05);
 }
 
 .site-title, .site-title:visited {
@@ -430,8 +440,16 @@ a:active {
     text-align: center;
   }
   
+  .site-nav {
+    order: 2;
+  }
+  
+  .header-logo-container {
+    order: 1;
+  }
+  
   .header-logo {
-    height: 50px;
+    height: 60px;
   }
   
   .hero-title {
