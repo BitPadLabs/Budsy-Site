@@ -21,8 +21,8 @@ body {
   min-height: 100vh;
 }
 
-/* Ensure main containers use cream theme - HOME PAGE ONLY */
-body.page-default .page-content {
+/* Ensure main containers use cream theme */
+.page-content {
   background: #FFF8E7;
   padding: 0;
 }
@@ -174,71 +174,65 @@ body.page-default .page-content {
   transform: scale(1.05);
 }
 
-/* Unified Button Styling - Single Style for All Buttons */
+/* Single Unified Button Style - Clean and Simple */
 .btn, 
+.btn-primary, 
+.btn-secondary,
 a.btn, 
-button,
-input[type="submit"],
-input[type="button"],
-.hero .btn,
-.hero a.btn,
-[class*="btn"] {
+a.btn-primary, 
+a.btn-secondary,
+button {
   display: inline-block;
-  padding: 12px 30px;
-  margin: 8px;
+  padding: 15px 35px;
+  margin: 15px;
   text-decoration: none;
   border-radius: 25px;
   font-weight: 600;
-  font-size: 1rem;
   font-family: 'Georgia', serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
   border: 2px solid var(--budsy-h2);
   background: transparent;
   color: var(--budsy-h2);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(214, 102, 130, 0.2);
-  text-align: center;
-  line-height: 1.2;
+  box-shadow: 0 4px 15px rgba(214, 102, 130, 0.3);
 }
 
-.btn:hover,
-a.btn:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="button"]:hover,
-.hero .btn:hover,
-.hero a.btn:hover,
-[class*="btn"]:hover {
+.btn:hover, 
+.btn-primary:hover, 
+.btn-secondary:hover,
+a.btn:hover, 
+a.btn-primary:hover, 
+a.btn-secondary:hover,
+button:hover {
   background: var(--budsy-h2);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(214, 102, 130, 0.4);
-  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(214, 102, 130, 0.4);
 }
 
-.btn:active,
-a.btn:active,
-button:active,
-input[type="submit"]:active,
-input[type="button"]:active,
-.hero .btn:active,
-.hero a.btn:active,
-[class*="btn"]:active {
+.btn:active, 
+.btn-primary:active, 
+.btn-secondary:active,
+a.btn:active, 
+a.btn-primary:active, 
+a.btn-secondary:active,
+button:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(214, 102, 130, 0.3);
+  box-shadow: 0 2px 10px rgba(214, 102, 130, 0.3);
 }
 
 /* Feature section styling */
-.features {
-  background: #FFF8E7;
-  padding: 3rem 0;
+  text-decoration: none !important;
 }
 
-.features .wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+.btn-secondary:hover,
+a.btn-secondary:hover {
+  box-shadow: 0 6px 20px rgba(137, 177, 83, 0.4) !important;
 }
+
+/* Active state */
 .btn:active, 
 .btn-primary:active, 
 .btn-secondary:active,
@@ -577,9 +571,8 @@ input:focus, textarea:focus, select:focus {
   box-shadow: 0 0 10px rgba(214, 102, 130, 0.3);
 }
 
-/* Page Styling for Terms and Privacy ONLY */
-body.page-terms .page-content,
-body.page-privacy .page-content {
+/* Page Styling for Terms and Privacy */
+.page-content {
   background: #FFF8E7;
   min-height: calc(100vh - 200px);
 }
@@ -615,50 +608,41 @@ body.page-privacy .page-content h2 {
   padding-left: 1rem !important;
 }
 
-body.page-terms .page-content h3,
-body.page-privacy .page-content h3 {
+.page-content h3 {
   color: var(--budsy-h3) !important;
   font-size: 1.3rem !important;
   margin: 1.5rem 0 0.8rem 0 !important;
 }
 
-body.page-terms .page-content p,
-body.page-privacy .page-content p {
+.page-content p {
   line-height: 1.7 !important;
   margin-bottom: 1rem !important;
   text-align: justify !important;
 }
 
-body.page-terms .page-content ul, 
-body.page-terms .page-content ol,
-body.page-privacy .page-content ul, 
-body.page-privacy .page-content ol {
+.page-content ul, .page-content ol {
   margin: 1rem 0 !important;
   padding-left: 2rem !important;
 }
 
-body.page-terms .page-content li,
-body.page-privacy .page-content li {
+.page-content li {
   margin-bottom: 0.5rem !important;
   line-height: 1.6 !important;
 }
 
-body.page-terms .page-content strong,
-body.page-privacy .page-content strong {
+.page-content strong {
   color: var(--budsy-h1) !important;
   font-weight: 600 !important;
 }
 
-body.page-terms .page-content a,
-body.page-privacy .page-content a {
+.page-content a {
   color: var(--budsy-h2) !important;
   text-decoration: none !important;
   border-bottom: 1px solid transparent !important;
   transition: all 0.3s ease !important;
 }
 
-body.page-terms .page-content a:hover,
-body.page-privacy .page-content a:hover {
+.page-content a:hover {
   color: var(--budsy-title) !important;
   border-bottom: 1px solid var(--budsy-title) !important;
 }
