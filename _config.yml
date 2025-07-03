@@ -1,0 +1,56 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server.
+
+# Site settings
+title: Budsy
+email: budsyapp.com@gmail.com
+description: >-
+  Your bud tracking buddy - Track, analyze, and optimize your medical marijuana usage 
+  with smart algorithms and beautiful insights.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.budsyapp.com" # the base hostname & protocol for your site
+
+# Social links and contributors
+github_username: Severswoed
+repository: Severswoed/Budsy-Site
+contact_email: budsyapp@gmail.com
+company_name: Budsy App
+
+# Project contributors
+contributors:
+  - name: hrcassels
+    github: hrcassels
+    role: Lead Developer
+  - name: Severswoed
+    github: Severswoed
+    role: Co-Developer  
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+  - .gitignore
