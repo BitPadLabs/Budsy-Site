@@ -682,17 +682,18 @@ body.page-privacy .page-content a:hover {
   }
 }
 
-/* Terms and Privacy Page Styling */
+/* Terms and Privacy Page Styling ONLY */
 /* Override the default wrapper for better content presentation */
-.page-content .wrapper {
+body.page-terms .page-content .wrapper,
+body.page-privacy .page-content .wrapper {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(137, 177, 83, 0.1);
   border: 1px solid rgba(137, 177, 83, 0.2);
-  margin-top: 2rem;
+}
   margin-bottom: 2rem;
 }
 
@@ -761,11 +762,13 @@ body.page-privacy .page-content a:hover {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-  .page-content {
+  body.page-terms .page-content,
+  body.page-privacy .page-content {
     padding: 1rem 0.5rem;
   }
   
-  .page-content .wrapper {
+  body.page-terms .page-content .wrapper,
+  body.page-privacy .page-content .wrapper {
     margin: 0.5rem;
     padding: 2rem 1.5rem;
     margin-top: 1rem;
@@ -782,16 +785,17 @@ body.page-privacy .page-content a:hover {
 }
 
 /* Homepage specific overrides to prevent container styling */
-.home .page-content {
+body.page-default .page-content {
   background: transparent !important;
   padding: 0 !important;
 }
 
-.home .page-content .wrapper {
+body.page-default .page-content .wrapper {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
   border-radius: 0 !important;
   margin: 0 auto !important;
   padding: 0 !important;
+  max-width: none !important;
 }
