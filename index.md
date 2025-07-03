@@ -1,21 +1,16 @@
 ---
-la    <div class="logo-container">
-      <div class="logo" style="background-image: url('{{ "/assets/img/budsy-logo-name-slogan.png" | relative_url }}');"></div>
-    </div>t: default
+layout: default
 title: Home
 ---
 
 <div class="hero">
   <div class="wrapper">
-    <div class="logo-container">
-      <div class="logo" style="background-image: url('{{ "/assets/img/budsy-logo.png" | relative_url }}');"></div>
-    </div>
+    <h1 class="hero-title">{{ site.title }}</h1>
+    <p class="hero-tagline">{{ site.description }}</p>
     
-    <p class="hero-tagline">Your bud tracking buddy</p>
-    
-    <div>
-      <a href="#features" class="btn btn-primary">Start Tracking</a>
-      <a href="https://github.com/{{ site.repository }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    <div class="hero-buttons">
+      <a href="#features" class="btn btn-primary">Explore Features</a>
+      <a href="mailto:{{ site.contact_email }}" class="btn btn-secondary">Get Updates</a>
     </div>
   </div>
 </div>
