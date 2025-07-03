@@ -5,7 +5,7 @@ permalink: /privacy/
 ---
 
 <div class="page-container">
-  <div class="content-wrapper">
+<div class="content-wrapper">
 
 # Privacy Policy
 
@@ -178,5 +178,5 @@ If you have any questions, concerns, or requests regarding this Privacy Policy o
 
 *This Privacy Policy is effective as of the date listed above and governs your use of Budsy. By using the App, you consent to the collection and use of information as described in this policy.*
 
-  </div>
+</div>
 </div>

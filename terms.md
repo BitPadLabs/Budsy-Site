@@ -5,7 +5,7 @@ permalink: /terms/
 ---
 
 <div class="page-container">
-  <div class="content-wrapper">
+<div class="content-wrapper">
 
 # Terms of Service
 
@@ -158,5 +158,5 @@ These Terms constitute the entire agreement between you and {{ site.company_name
 
 *By using Budsy, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.*
 
-  </div>
+</div>
 </div>

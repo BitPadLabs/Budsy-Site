@@ -2,48 +2,32 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        {%- if site.contributors -%}
-        <div class="contributors">
-          <h3>Contributors</h3>
-          <ul class="contributor-list">
-            {%- for contributor in site.contributors -%}
-            <li>
-              <a href="https://github.com/{{ contributor.github | escape }}" target="_blank" class="contributor-link">
-                <svg class="svg-icon github-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
-                <span class="contributor-name">{{ contributor.name | escape }}</span>
-              </a>
-            </li>
-            {%- endfor -%}
-          </ul>
-        </div>
+    <div class="footer-content">
+      <div class="footer-left">
+        <h2 class="footer-heading">{{ site.title | escape }}</h2>
+        <p class="footer-tagline">Your bud tracking buddy!</p>
+        {%- if site.email -%}
+        <p class="footer-contact">
+          <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </p>
         {%- endif -%}
       </div>
 
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
+      <div class="footer-right">
+        {%- if site.contributors -%}
+        <div class="contributors">
+          <h3>Contributors</h3>
+          <div class="contributor-grid">
+            {%- for contributor in site.contributors -%}
+            <a href="https://github.com/{{ contributor.github | escape }}" target="_blank" class="contributor-link">
+              <svg class="svg-icon github-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+              <span class="contributor-name">{{ contributor.name | escape }}</span>
+            </a>
+            {%- endfor -%}
+          </div>
+        </div>
+        {%- endif -%}
       </div>
     </div>
-
   </div>
-
 </footer>
