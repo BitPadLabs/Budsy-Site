@@ -3,9 +3,11 @@
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <div class="header-brand">
-      <img src="{{ "/assets/img/budsy-mascot.png" | relative_url }}" alt="Budsy Logo" class="header-logo">
+    <div class="header-content">
       <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      <div class="header-logo-container">
+        <img src="{{ "/assets/img/budsy-logo-name-slogan1.png" | relative_url }}" alt="Budsy - Your bud tracking buddy" class="header-logo">
+      </div>
     </div>
 
     {%- if page_paths -%}

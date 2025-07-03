@@ -30,12 +30,10 @@
           <ul class="contributor-list">
             {%- for contributor in site.contributors -%}
             <li>
-              <a href="https://github.com/{{ contributor.github | escape }}" target="_blank">
-                {{ contributor.name | escape }}
+              <a href="https://github.com/{{ contributor.github | escape }}" target="_blank" class="contributor-link">
+                <svg class="svg-icon github-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+                <span class="contributor-name">{{ contributor.name | escape }}</span>
               </a>
-              {%- if contributor.role -%}
-                <span class="role"> - {{ contributor.role | escape }}</span>
-              {%- endif -%}
             </li>
             {%- endfor -%}
           </ul>
