@@ -62,17 +62,15 @@ title: Home
     </p>
     
     <div style="margin-top: 2rem;">
-      <a href="https://github.com/{{ site.github_username }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Follow Development</a>
+      <a href="https://github.com/{{ site.github_org }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Follow Development</a>
     </div>
     
     <h3 style="margin-top: 3rem; color: var(--budsy-h2); text-shadow: 0 0 10px rgba(214, 102, 130, 0.4);">Support the Project</h3>
     <p style="color: var(--budsy-text);">Help us build the best bud tracking app:</p>
     <div style="display: flex; justify-content: center; margin-top: 1rem;">
       <ul style="list-style: none; padding: 0; color: var(--budsy-text); text-align: left; max-width: 400px; margin: 0 0 0 2rem;">
-        <li style="margin-bottom: 0.5rem;">⭐ Star the repository on GitHub</li>
         <li style="margin-bottom: 0.5rem;">🐛 Report bugs or suggest features</li>
         <li style="margin-bottom: 0.5rem;">🔄 Share Budsy with other patients</li>
-        <li style="margin-bottom: 0.5rem;">💡 Contribute to the codebase</li>
         <li style="margin-bottom: 0.5rem;">💚 Spread awareness about responsible usage</li>
       </ul>
     </div>

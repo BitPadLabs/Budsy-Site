@@ -10,7 +10,7 @@
 
 # Site settings
 title: Budsy
-email: budsyapp.com@gmail.com
+email: info@budsyapp.com
 description: >-
   Your bud tracking buddy - Track, analyze, and optimize your medical marijuana usage 
   with smart algorithms and beautiful insights.
@@ -19,9 +19,11 @@ url: "https://www.budsyapp.com" # the base hostname & protocol for your site
 
 # Social links and contributors
 github_username: Severswoed
-repository: Severswoed/Budsy-Site
-contact_email: budsyapp@gmail.com
-company_name: Budsy App
+github_username1: hrcassels
+github_org: BitPadLabs
+repository: BitPadLabs/Budsy-Site
+contact_email: info@budsyapp.com
+company_name: BitPad Labs
 
 # Project contributors
 contributors:

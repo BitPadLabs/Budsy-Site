@@ -6,7 +6,7 @@ permalink: /privacy/
 
 # Privacy Policy
 
-**Last updated: July 03, 2025**
+**Last updated: July 13, 2025**
 
 ## 1. Introduction
 

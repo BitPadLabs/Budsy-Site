@@ -6,7 +6,7 @@ permalink: /terms/
 
 # Terms of Service
 
-**Last updated: July 03, 2025**
+**Last updated: July 13, 2025**
 
 ## 1. Acceptance of Terms
 
