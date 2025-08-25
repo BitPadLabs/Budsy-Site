@@ -10,16 +10,16 @@ permalink: /terms/
 
 ## 1. Acceptance of Terms
 
-By downloading, installing, or using Budsy ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.
+By downloading, installing, or using budsyapp ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.
 
 ## 2. Description of Service
 
-Budsy is a cannabis tracking application designed to help medical marijuana patients track their usage, manage their allotments, and gain insights into their consumption patterns. The App is provided as-is and may be updated from time to time at our discretion.
+budsyapp is a cannabis recording application designed to help medical marijuana patients monitor their usage, manage their allotments, and gain insights into their consumption patterns. The App is provided as-is and may be updated from time to time at our discretion.
 
 ## 3. License and Use
 
 ### 3.1 License Grant
-Subject to these Terms, we grant you a limited, non-exclusive, non-transferable license to use Budsy for personal medical use in jurisdictions where medical cannabis is legal.
+Subject to these Terms, we grant you a limited, non-exclusive, non-transferable license to use budsyapp for personal medical use in jurisdictions where medical cannabis is legal.
 
 ### 3.2 Restrictions
 You may not:
@@ -30,12 +30,12 @@ You may not:
 - Attempt to gain unauthorized access to our systems or networks
 
 ### 3.3 Legal Compliance
-You are solely responsible for ensuring that your use of the App and any cannabis consumption you track complies with all applicable local, state, and federal laws.
+You are solely responsible for ensuring that your use of the App and any cannabis consumption you record complies with all applicable local, state, and federal laws.
 
 ## 4. Privacy and Medical Data
 
 ### 4.1 Data Protection
-Budsy is designed with privacy in mind. The App:
+budsyapp is designed with privacy in mind. The App:
 - Stores data locally on your device by default
 - Does not collect personal medical information without your consent
 - Follows HIPAA-inspired privacy principles
@@ -50,7 +50,7 @@ The App is not intended to provide medical advice, diagnosis, or treatment. Alwa
 You must be at least 18 years old or the legal age for medical cannabis use in your jurisdiction to use this App.
 
 ### 5.2 Legal Cannabis Use Only
-This App is intended solely for tracking legal medical cannabis use in jurisdictions where such use is permitted by law.
+This App is intended solely for recording legal medical cannabis use in jurisdictions where such use is permitted by law.
 
 ### 5.3 Compliance Responsibility
 You are responsible for:
@@ -65,7 +65,7 @@ You are responsible for:
 The App and all related intellectual property rights are owned by {{ site.company_name }} or our licensors.
 
 ### 6.2 Trademarks
-Budsy and related marks are trademarks of {{ site.company_name }}. You may not use our trademarks without our prior written consent.
+budsyapp and related marks are trademarks of {{ site.company_name }}. You may not use our trademarks without our prior written consent.
 
 ### 6.3 User Data
 You retain ownership of all data you input into the App. We do not claim ownership of your personal medical information.
@@ -76,7 +76,7 @@ You retain ownership of all data you input into the App. We do not claim ownersh
 THE APP IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
 
 ### 7.2 No Medical Advice
-The App does not provide medical advice, diagnosis, or treatment recommendations. It is solely a tracking and analytics tool.
+The App does not provide medical advice, diagnosis, or treatment recommendations. It is solely a logging and analytics tool.
 
 ### 7.3 No Guarantees
 We do not guarantee that the App will be:
@@ -90,10 +90,10 @@ We do not guarantee that the App will be:
 TO THE MAXIMUM EXTENT PERMITTED BY LAW, {{ site.company_name | upcase }} SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES.
 
 ### 8.1 Medical Liability
-We are not liable for any medical outcomes, adverse reactions, or health issues that may result from cannabis use tracked through the App.
+We are not liable for any medical outcomes, adverse reactions, or health issues that may result from cannabis use recorded through the App.
 
 ### 8.2 Legal Liability
-We are not liable for any legal consequences that may arise from your cannabis use or possession, regardless of what the App tracks or suggests.
+We are not liable for any legal consequences that may arise from your cannabis use or possession, regardless of what the App records or suggests.
 
 ## 9. Updates and Modifications
 
@@ -116,7 +116,7 @@ Upon termination, you may export your data. We will not retain your personal med
 
 ## 11. Open Source
 
-Budsy may be released as an open-source project. If so, the source code will be available and subject to the license terms specified in the repository.
+budsyapp may be released as an open-source project in the future. If so, the source code will be available and subject to the license terms specified in the repository.
 
 ## 12. Governing Law
 
@@ -132,13 +132,13 @@ If any provision of these Terms is found to be unenforceable or invalid, that pr
 As a medical cannabis patient, you acknowledge that:
 - You are responsible for following your physician's recommendations
 - You must comply with your jurisdiction's medical cannabis laws
-- The App is a tool to assist with tracking, not medical guidance
+- The App is a tool to assist with recording, not medical guidance
 
 ### 14.2 Data Security for Medical Information
 We implement appropriate safeguards for your medical information, but you acknowledge that:
 - No system is 100% secure
 - You should take additional precautions with sensitive medical data
-- You can control what information is tracked and stored
+- You can control what information is recorded and stored
 
 ## 15. Contact Information
 
@@ -153,4 +153,4 @@ These Terms constitute the entire agreement between you and {{ site.company_name
 
 ---
 
-*By using Budsy, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.*
+*By using budsyapp, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.*

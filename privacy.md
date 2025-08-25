@@ -10,20 +10,20 @@ permalink: /privacy/
 
 ## 1. Introduction
 
-Budsy App ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use Budsy ("the App").
+budsyapp ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use budsyapp ("the App").
 
 ## 2. Information We Collect
 
 ### 2.1 Local Data Storage
-Budsy is designed as a privacy-first application that primarily stores data locally on your device, including:
-- Cannabis usage logs and tracking data
+budsyapp is designed as a privacy-first application that primarily stores data locally on your device, including:
+- Cannabis usage logs and journal data
 - Strain information and personal ratings
 - Application settings and preferences
 - User interface configurations
 - Local application logs for debugging purposes
 
 ### 2.2 Medical Information
-When you use Budsy's tracking features, we may locally store:
+When you use budsyapp's purchase log and journaling features, we may locally store:
 - Cannabis consumption quantities and timing
 - Strain details, THC/CBD percentages, and terpene profiles
 - Personal effects and reaction notes
@@ -49,7 +49,7 @@ We use the collected information to:
 
 ### 3.2 Medical Data Use
 Your medical cannabis data is used exclusively to:
-- Track your consumption patterns
+- Record your consumption patterns
 - Provide personalized insights and recommendations
 - Generate reports for your personal use
 - Support your medical cannabis management goals
@@ -105,8 +105,8 @@ You have the right to:
 
 ### 6.2 Medical Privacy Rights
 For medical cannabis data, you can:
-- Control what information is tracked
-- Disable specific tracking features
+- Control what information is logged
+- Disable specific journal features
 - Choose data retention periods
 - Permanently delete sensitive information
 
@@ -136,18 +136,18 @@ Your medical cannabis data:
 ## 8. Medical Information Disclaimer
 
 ### 8.1 Not Medical Advice
-Budsy is a tracking tool and does not provide medical advice. Always consult with qualified healthcare providers regarding your medical cannabis use.
+budsyapp is a tool and does not provide medical advice. Always consult with qualified healthcare providers regarding your medical cannabis use.
 
 ### 8.2 Compliance Responsibility
 Users are responsible for ensuring their cannabis use complies with applicable local, state, and federal laws.
 
 ## 9. Children's Privacy
 
-Budsy is intended for use by adults in jurisdictions where medical cannabis is legal. We do not knowingly collect information from minors under the age of 18 or the legal age in their jurisdiction.
+budsyapp is intended for use by adults in jurisdictions where medical cannabis is legal. We do not knowingly collect information from minors under the age of 21 or the legal age in their jurisdiction.
 
 ## 10. International Data Transfers
 
-If you are using Budsy outside of the United States, please be aware that your information may be processed in the United States where our development servers are located.
+If you are using budsyapp outside of the United States, please be aware that your information may be processed in the United States where our development servers are located.
 
 ## 11. Changes to This Privacy Policy
 
@@ -173,4 +173,4 @@ If you have any questions, concerns, or requests regarding this Privacy Policy o
 
 ---
 
-*This Privacy Policy is effective as of the date listed above and governs your use of Budsy. By using the App, you consent to the collection and use of information as described in this policy.*
+*This Privacy Policy is effective as of the date listed above and governs your use of budsyapp. By using the App, you consent to the collection and use of information as described in this policy.*
