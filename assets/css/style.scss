@@ -33,7 +33,7 @@ html, body {
   color: #101A26;
   margin: 0;
   padding: 0;
-  font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: 'Nunito', 'Georgia', 'Times New Roman', serif;
   min-height: 100vh;
 }
 
@@ -153,30 +153,31 @@ html, body {
 }
 
 /* Unified Button Styling - Single Style for All Buttons */
-.btn, 
-a.btn, 
-button,
-input[type="submit"],
-input[type="button"],
-.hero .btn,
-.hero a.btn,
-[class*="btn"] {
-  display: inline-block;
-  padding: 12px 30px;
-  margin: 8px;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 1rem;
-  font-family: 'Georgia', serif;
-  border: 2px solid var(--budsy-h2);
-  background: transparent;
-  color: var(--budsy-h2);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(214, 102, 130, 0.2);
-  text-align: center;
-  line-height: 1.2;
+ .btn, 
+ .btn, 
+ a.btn, 
+ button,
+ input[type="submit"],
+ input[type="button"],
+ .hero .btn,
+ .hero a.btn,
+ [class*="btn"] {
+   display: inline-block;
+   padding: 12px 30px;
+   margin: 8px;
+   text-decoration: none;
+   border-radius: 25px;
+   font-weight: 600;
+   font-size: 1rem;
+   font-family: 'Nunito', 'Georgia', serif;
+   border: 2px solid var(--budsy-title);
+   background: transparent;
+   color: var(--budsy-title);
+   cursor: pointer;
+   transition: all 0.3s ease;
+   box-shadow: 0 3px 10px rgba(246, 169, 160, 0.2);
+   text-align: center;
+   line-height: 1.2;
 }
 
 .btn:hover,
@@ -187,10 +188,10 @@ input[type="button"]:hover,
 .hero .btn:hover,
 .hero a.btn:hover,
 [class*="btn"]:hover {
-  background: var(--budsy-h2);
+  background: var(--budsy-title);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(214, 102, 130, 0.4);
+  box-shadow: 0 5px 15px rgba(246, 169, 160, 0.4);
   text-decoration: none;
 }
 
@@ -203,7 +204,7 @@ input[type="button"]:active,
 .hero a.btn:active,
 [class*="btn"]:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(214, 102, 130, 0.3);
+  box-shadow: 0 2px 8px rgba(246, 169, 160, 0.2);
 }
 
 /* Feature sections */
@@ -242,9 +243,9 @@ input[type="button"]:active,
 }
 
 .feature-card h3 {
-  color: var(--budsy-h2);
+  color: var(--budsy-title);
   margin-bottom: 1rem;
-  text-shadow: 0 0 8px rgba(214, 102, 130, 0.3);
+  text-shadow: 0 0 8px rgba(246, 169, 160, 0.18);
 }
 
 /* Footer */
