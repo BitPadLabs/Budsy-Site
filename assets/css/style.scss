@@ -9,18 +9,22 @@
   /* Primary colors */
   --budsy-title: #F6A9A0; /* Title color */
   --budsy-subtitle: #89b153; /* Subtitle color */
-  --budsy-h1: #4A6735; /* Heading 1 */
-  --budsy-h2: #D66682; /* Heading 2 */
-  --budsy-h3: #2C3E50; /* Heading 3 */
-  --budsy-h4: #F29BAB; /* Heading 4 */
-  --budsy-h5: #4F5D75; /* Heading 5 */
-  --budsy-text: #101A26; /* Normal text */
+    --budsy-h1: #4A6735; /* Deep Green */
+    --budsy-h2: #D66682; /* Rose */
+    --budsy-h3: #89b153; /* Old Navy */
+    --budsy-h4: #FFD700; /* Gold Star */
+    --budsy-h5: #E9D240; /* Mustard */
+    --budsy-text: #2C3E50; /* Old Navy for text */
   
   /* Additional theme colors */
   --budsy-cream: #FFF8E7; /* Cream background */
   --budsy-pink-light: #F6A9A0; /* Light pink accent */
   --budsy-green-light: #89b153; /* Light green accent */
   --budsy-navy: #2C3E50; /* Navy accent */
+    --budsy-cream: #F8F6F0; /* Cream background */
+    --budsy-pink-light: #F6A9A0; /* Coral Pink accent */
+    --budsy-green-light: #89b153; /* Soft Green accent */
+    --budsy-navy: #1D4140; /* True Navy */
 }
 
 /* Global cream theme override */
