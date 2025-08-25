@@ -9,10 +9,10 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server.
 
 # Site settings
-title: Budsy
+title: budsyapp
 email: info@budsyapp.com
 description: >-
-  Your bud tracking buddy - Track, analyze, and optimize your medical marijuana usage 
+  Record, analyze, and optimize your medical marijuana usage 
   with smart algorithms and beautiful insights.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.budsyapp.com" # the base hostname & protocol for your site
@@ -23,7 +23,7 @@ github_username1: hrcassels
 github_org: BitPadLabs
 repository: BitPadLabs/Budsy-Site
 contact_email: info@budsyapp.com
-company_name: BitPad Labs
+company_name: BitPadLabs LLC
 
 # Project contributors
 contributors:
