@@ -5,43 +5,63 @@
 /* Budsy Custom Styles - Professional & Elegant */
 /* Color scheme from provided direction */
 :root {
-  /* Primary colors */
+  /* Light mode colors (default) */
   --budsy-title: #F6A9A0; /* Title color */
   --budsy-subtitle: #89b153; /* Subtitle color */
-    --budsy-h1: #4A6735; /* Deep Green */
-    --budsy-h2: #F6A9A0; /* Rose */
-    --budsy-h3: #89b153; /* Old Navy */
-    --budsy-h4: #FFD700; /* Gold Star */
-    --budsy-h5: #E9D240; /* Mustard */
-    --budsy-text: #4A6735; /* Old Navy for text */
+  --budsy-h1: #4A6735; /* Deep Green */
+  --budsy-h2: #F6A9A0; /* Rose */
+  --budsy-h3: #89b153; /* Old Navy */
+  --budsy-h4: #FFD700; /* Gold Star */
+  --budsy-h5: #E9D240; /* Mustard */
+  --budsy-text: #4A6735; /* Old Navy for text */
   
   /* Additional theme colors */
   --budsy-cream: #FFF8E7; /* Cream background */
   --budsy-pink-light: #F6A9A0; /* Light pink accent */
   --budsy-green-light: #89b153; /* Light green accent */
   --budsy-navy: #2C3E50; /* Navy accent */
-    --budsy-cream: #F8F6F0; /* Cream background */
-    --budsy-pink-light: #F6A9A0; /* Coral Pink accent */
-    --budsy-green-light: #89b153; /* Soft Green accent */
-    --budsy-navy: #1D4140; /* True Navy */
+  --budsy-card-background: #FFFFFF;
+  --budsy-card-shadow: rgba(137, 177, 83, 0.15);
+}
+
+/* Dark mode colors */
+body.dark-mode {
+  --budsy-title: #FF9B92; /* Lighter coral for dark mode */
+  --budsy-subtitle: #A4C766; /* Lighter soft green */
+  --budsy-h1: #6B8A4F; /* Lighter deep green */
+  --budsy-h2: #E899B3; /* Lighter rose */
+  --budsy-h3: #A4C766; /* Lighter green */
+  --budsy-h4: #FFE55C; /* Lighter gold */
+  --budsy-h5: #F4E666; /* Lighter mustard */
+  --budsy-text: #FFFFFF; /* White text for dark mode */
+  
+  /* Dark mode backgrounds and accents */
+  --budsy-cream: #121212; /* Dark background */
+  --budsy-pink-light: #FF9B92; /* Light pink accent */
+  --budsy-green-light: #A4C766; /* Light green accent */
+  --budsy-navy: #FFFFFF; /* White for dark mode */
+  --budsy-card-background: #1E1E1E;
+  --budsy-card-shadow: rgba(255, 255, 255, 0.05);
 }
 
 /* Global cream theme override */
 html, body {
-  background: #FFF8E7;
-  color: #101A26;
+  background: var(--budsy-cream);
+  color: var(--budsy-text);
   margin: 0;
   padding: 0;
-    font-family: 'Nunito', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Nunito', 'Georgia', 'Times New Roman', serif;
   min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* Header styling */
 .site-header {
-  background: #FFF8E7;
+  background: var(--budsy-cream);
   border-top: 5px solid var(--budsy-subtitle);
-  box-shadow: 0 2px 10px rgba(137, 177, 83, 0.2);
+  box-shadow: 0 2px 10px var(--budsy-card-shadow);
   padding: 1rem 0;
+  transition: background 0.3s ease;
 }
 
 .header-content {
@@ -94,10 +114,11 @@ html, body {
 .hero {
   text-align: center;
   padding: 5rem 0;
-  background: linear-gradient(135deg, #FFF8E7 0%, #F5F1E8 100%);
+  background: linear-gradient(135deg, var(--budsy-cream) 0%, var(--budsy-cream) 100%);
   color: var(--budsy-text);
   margin: 0;
   border-bottom: 1px solid rgba(137, 177, 83, 0.2);
+  transition: background 0.3s ease;
 }
 
 .hero-title {
@@ -152,31 +173,31 @@ html, body {
 }
 
 /* Unified Button Styling - Single Style for All Buttons */
- .btn, 
- a.btn, 
- button,
- input[type="submit"],
- input[type="button"],
- .hero .btn,
- .hero a.btn,
- [class*="btn"] {
-   display: inline-block;
-   padding: 12px 30px;
-   margin: 8px;
-   text-decoration: none;
-   border-radius: 25px;
-   font-weight: 600;
-   font-size: 1rem;
-   font-family: 'Nunito', 'Georgia', serif;
-   border: 2px solid var(--budsy-title);
-   background: transparent;
-   color: var(--budsy-title);
-   cursor: pointer;
-   transition: all 0.3s ease;
-   box-shadow: 0 3px 10px rgba(246, 169, 160, 0.2);
-   text-align: center;
-   line-height: 1.2;
- }
+.btn, 
+a.btn, 
+button,
+input[type="submit"],
+input[type="button"],
+.hero .btn,
+.hero a.btn,
+[class*="btn"] {
+  display: inline-block;
+  padding: 12px 30px;
+  margin: 8px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Nunito', 'Georgia', serif;
+  border: 2px solid var(--budsy-title);
+  background: transparent;
+  color: var(--budsy-title);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px var(--budsy-card-shadow);
+  text-align: center;
+  line-height: 1.2;
+}
 
 .btn:hover,
 a.btn:hover,
@@ -187,9 +208,9 @@ input[type="button"]:hover,
 .hero a.btn:hover,
 [class*="btn"]:hover {
   background: var(--budsy-title);
-  color: white;
+  color: var(--budsy-cream);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(246, 169, 160, 0.4);
+  box-shadow: 0 5px 15px var(--budsy-card-shadow);
   text-decoration: none;
 }
 
@@ -202,13 +223,14 @@ input[type="button"]:active,
 .hero a.btn:active,
 [class*="btn"]:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(246, 169, 160, 0.2);
+  box-shadow: 0 2px 8px var(--budsy-card-shadow);
 }
 
 /* Feature sections */
 .features {
-  background: #FFF8E7;
+  background: var(--budsy-cream);
   padding: 4rem 0;
+  transition: background 0.3s ease;
 }
 
 .features .wrapper {
@@ -225,19 +247,19 @@ input[type="button"]:active,
 }
 
 .feature-card {
-  background: linear-gradient(135deg, #FFF8E7 0%, #F5F1E8 100%);
+  background: var(--budsy-card-background);
   color: var(--budsy-text);
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(137, 177, 83, 0.15);
+  box-shadow: 0 5px 20px var(--budsy-card-shadow);
   border: 1px solid rgba(137, 177, 83, 0.2);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
   border-left: 4px solid var(--budsy-subtitle);
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(137, 177, 83, 0.25);
+  box-shadow: 0 10px 30px var(--budsy-card-shadow);
 }
 
 .feature-card h3 {
@@ -248,10 +270,11 @@ input[type="button"]:active,
 
 /* Footer */
 .site-footer {
-  background: linear-gradient(135deg, #F5F1E8 0%, #EFE9E0 100%);
+  background: var(--budsy-card-background);
   color: var(--budsy-text);
   padding: 2rem 0;
   border-top: 1px solid rgba(137, 177, 83, 0.2);
+  transition: background 0.3s ease;
 }
 
 .footer-content {
@@ -348,6 +371,15 @@ input[type="button"]:active,
 .contributor-name {
   font-weight: 500;
   font-size: 1rem;
+}
+
+/* Dark mode specific styles */
+body.dark-mode .launch-status {
+  background: rgba(164, 199, 102, 0.15) !important;
+}
+
+body.dark-mode .trigger {
+  background: var(--budsy-card-background) !important;
 }
 
 /* Mobile responsiveness */
@@ -452,20 +484,20 @@ input[type="button"]:active,
 
 /* Code blocks */
 pre, code {
-  background: #F5F1E8;
+  background: var(--budsy-card-background);
   color: var(--budsy-text);
   border: 1px solid var(--budsy-subtitle);
   border-radius: 5px;
 }
 
-/* Style tables for cream theme */
+/* Style tables for theme */
 table {
-  background: var(--budsy-cream);
+  background: var(--budsy-card-background);
   border: 1px solid var(--budsy-subtitle);
 }
 
 th {
-  background: linear-gradient(135deg, #F5F1E8 0%, #EFE9E0 100%);
+  background: var(--budsy-card-background);
   color: var(--budsy-h1);
   border-bottom: 2px solid var(--budsy-subtitle);
 }
@@ -476,7 +508,7 @@ td {
 
 /* Blockquotes */
 blockquote {
-  background: linear-gradient(135deg, #F5F1E8 0%, #EFE9E0 100%);
+  background: var(--budsy-card-background);
   border-left: 4px solid var(--budsy-subtitle);
   color: var(--budsy-text);
   border-radius: 0 10px 10px 0;
@@ -484,7 +516,7 @@ blockquote {
 
 /* Form elements */
 input, textarea, select {
-  background: var(--budsy-cream);
+  background: var(--budsy-card-background);
   color: var(--budsy-text);
   border: 1px solid var(--budsy-subtitle);
   border-radius: 5px;
@@ -495,13 +527,14 @@ input:focus, textarea:focus, select:focus {
   box-shadow: 0 0 10px rgba(214, 102, 130, 0.3);
 }
 
-/* Page Content Styling - Terms and Privacy Pages */
+/* Page Content Styling */
 .page-content {
-  background: #FFF8E7;
+  background: var(--budsy-cream);
   padding: 0;
+  transition: background 0.3s ease;
 }
 
-/* Terms and Privacy pages - specific targeting with container */
+/* Terms and Privacy pages */
 body.page-terms .page-content,
 body.page-privacy .page-content {
   padding: 2rem 1rem;
@@ -512,13 +545,13 @@ body.page-privacy .page-content .wrapper {
   max-width: 800px;
   margin: 2rem auto;
   padding: 3rem;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--budsy-card-background);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(137, 177, 83, 0.1);
+  box-shadow: 0 4px 20px var(--budsy-card-shadow);
   border: 1px solid rgba(137, 177, 83, 0.2);
 }
 
-/* Style headings specifically for Terms and Privacy pages */
+/* Terms and Privacy headings */
 body.page-terms .page-content h1,
 body.page-privacy .page-content h1 {
   color: var(--budsy-title);

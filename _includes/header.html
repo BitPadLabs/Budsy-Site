@@ -5,14 +5,14 @@
     
     <div class="header-content" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
       
-      <!-- Larger Logo -->
+      <!-- Logo -->
       <div class="header-brand">
         <a href="{{ "/" | relative_url }}" style="display: flex; align-items: center; text-decoration: none;">
           <img src="{{ "/assets/img/budsy-app-icon.png" | relative_url }}" alt="budsyapp" class="header-logo" style="width: 64px; height: 64px; border-radius: 12px; box-shadow: 0 4px 15px rgba(137,177,83,0.25);">
         </a>
       </div>
 
-      <!-- Desktop Navigation (No CTA Button) -->
+      <!-- Desktop Navigation with Theme Toggle -->
       {%- if page_paths -%}
       <nav class="site-nav desktop-nav" style="display: flex; align-items: center;">
         <div class="nav-links" style="display: flex; gap: 2rem; align-items: center;">
@@ -22,21 +22,34 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}" style="color: var(--budsy-text); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: all 0.3s ease; padding: 0.5rem 0; position: relative;">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
+          
+          <!-- Theme Toggle Button -->
+          <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" style="background: none; border: 2px solid var(--budsy-subtitle); border-radius: 20px; padding: 0.5rem 1rem; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; color: var(--budsy-text); font-weight: 500;">
+            <span id="theme-icon">🌙</span>
+            <span id="theme-text">Dark</span>
+          </button>
         </div>
       </nav>
 
-      <!-- Mobile Navigation (No CTA Button) -->
+      <!-- Mobile Navigation with Theme Toggle -->
       <nav class="site-nav mobile-nav" style="display: none;">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" style="display: none;" />
-        <label for="nav-trigger" style="cursor: pointer; padding: 0.5rem;">
-          <span class="menu-icon" style="display: block; width: 24px; height: 18px; position: relative;">
-            <svg viewBox="0 0 18 15" width="24px" height="18px" style="fill: var(--budsy-title);">
-              <path d="m18,1.484c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z m0,5.125c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z m0,5.109c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z"/>
-            </svg>
-          </span>
-        </label>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <!-- Mobile Theme Toggle -->
+          <button id="theme-toggle-mobile" class="theme-toggle" onclick="toggleTheme()" style="background: none; border: 2px solid var(--budsy-subtitle); border-radius: 20px; padding: 0.4rem 0.8rem; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.3rem; color: var(--budsy-text); font-size: 0.9rem;">
+            <span id="theme-icon-mobile">🌙</span>
+          </button>
+          
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" style="display: none;" />
+          <label for="nav-trigger" style="cursor: pointer; padding: 0.5rem;">
+            <span class="menu-icon" style="display: block; width: 24px; height: 18px; position: relative;">
+              <svg viewBox="0 0 18 15" width="24px" height="18px" style="fill: var(--budsy-title);">
+                <path d="m18,1.484c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z m0,5.125c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z m0,5.109c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z"/>
+              </svg>
+            </span>
+          </label>
+        </div>
 
-        <div class="trigger" style="position: absolute; top: 100%; right: 0; background: white; border: 1px solid rgba(137,177,83,0.2); border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); padding: 1.2rem; min-width: 220px; z-index: 1000; display: none;">
+        <div class="trigger" style="position: absolute; top: 100%; right: 0; background: var(--budsy-card-background); border: 1px solid rgba(137,177,83,0.2); border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); padding: 1.2rem; min-width: 220px; z-index: 1000; display: none;">
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
@@ -48,21 +61,64 @@
       {%- endif -%}
     </div>
 
-    <!-- Simple Launch Status -->
+    <!-- Launch Status -->
     <div class="launch-status" style="text-align: center; padding: 0.6rem; background: rgba(137,177,83,0.08); border-radius: 6px; margin-top: 0.5rem;">
-      <span style="font-size: 0.85rem; color: var(--budsy-subtitle); font-weight: 500;">🚀 Unit calculation support in Mississippi and Florida coming soon 🚀</span>
+      <span style="font-size: 0.85rem; color: var(--budsy-subtitle); font-weight: 500;">🚀 Live in Mississippi • Florida coming soon</span>
     </div>
   </div>
 </header>
 
+<script>
+function toggleTheme() {
+  const body = document.body;
+  const isDark = body.classList.toggle('dark-mode');
+  
+  // Update toggle button text and icons
+  const icons = document.querySelectorAll('#theme-icon, #theme-icon-mobile');
+  const texts = document.querySelectorAll('#theme-text');
+  
+  icons.forEach(icon => {
+    icon.textContent = isDark ? '☀️' : '🌙';
+  });
+  
+  texts.forEach(text => {
+    text.textContent = isDark ? 'Light' : 'Dark';
+  });
+  
+  // Save preference
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+
+// Load saved theme on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.body.classList.add('dark-mode');
+    const icons = document.querySelectorAll('#theme-icon, #theme-icon-mobile');
+    const texts = document.querySelectorAll('#theme-text');
+    
+    icons.forEach(icon => icon.textContent = '☀️');
+    texts.forEach(text => text.textContent = 'Light');
+  }
+});
+</script>
+
 <style>
+/* Theme toggle hover effects */
+.theme-toggle:hover {
+  background: var(--budsy-subtitle) !important;
+  color: white !important;
+  transform: translateY(-1px);
+}
+
 /* Responsive behavior */
 @media (max-width: 768px) {
   .desktop-nav { display: none !important; }
   .mobile-nav { display: block !important; }
   .launch-status { margin-top: 0.8rem; }
   
-  /* Slightly smaller logo on mobile */
   .header-logo {
     width: 56px !important;
     height: 56px !important;
@@ -97,10 +153,5 @@
 /* Mobile menu toggle */
 #nav-trigger:checked ~ .trigger {
   display: block !important;
-}
-
-/* Optional: Remove launch status if you want even cleaner */
-.no-launch-banner .launch-status {
-  display: none;
 }
 </style>
