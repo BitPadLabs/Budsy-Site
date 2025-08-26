@@ -53,7 +53,7 @@
             {%- for path in page_paths -%}
               {%- assign my_page = site.pages | where: "path", path | first -%}
               {%- if my_page.title -%}
-              <a class="mobile-page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+              <a class="mobile-page-link" href="{{ my_page.url | relative_url }}" data-url="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
               {%- endif -%}
             {%- endfor -%}
           </div>
@@ -85,6 +85,18 @@ function toggleTheme() {
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
 
+// FIXED: Direct navigation function for mobile links
+function navigateToPage(url) {
+  // Close the mobile menu first
+  const navTrigger = document.getElementById('nav-trigger');
+  if (navTrigger) {
+    navTrigger.checked = false;
+  }
+  
+  // Navigate to the page
+  window.location.href = url;
+}
+
 // Load saved theme on page load
 document.addEventListener('DOMContentLoaded', function() {
   const savedTheme = localStorage.getItem('theme');
@@ -96,18 +108,36 @@ document.addEventListener('DOMContentLoaded', function() {
     icons.forEach(icon => icon.textContent = '☀️');
   }
   
-  // FIXED: Mobile menu link handling
+  // FIXED: Enhanced mobile menu link handling
   const mobileLinks = document.querySelectorAll('.mobile-page-link');
   mobileLinks.forEach(link => {
+    // Remove any existing event listeners
+    link.onclick = null;
+    
+    // Add click event listener
     link.addEventListener('click', function(e) {
-      // Don't prevent default - let the link navigate
-      // Just close the menu after a small delay
-      setTimeout(() => {
-        const navTrigger = document.getElementById('nav-trigger');
-        if (navTrigger) {
-          navTrigger.checked = false;
-        }
-      }, 100);
+      e.preventDefault(); // Prevent default to handle navigation manually
+      e.stopPropagation(); // Stop event bubbling
+      
+      const url = this.getAttribute('href') || this.getAttribute('data-url');
+      
+      if (url) {
+        console.log('Navigating to:', url); // Debug log
+        navigateToPage(url);
+      }
+    });
+    
+    // Add touch event for better mobile support
+    link.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const url = this.getAttribute('href') || this.getAttribute('data-url');
+      
+      if (url) {
+        console.log('Touch navigating to:', url); // Debug log
+        navigateToPage(url);
+      }
     });
   });
 });

@@ -5,7 +5,7 @@
 /* ============================================================================
    BUDSY CUSTOM STYLES - PROFESSIONAL & ELEGANT
    Complete theme with light/dark mode support
-   Updated: 2025-08-26 03:55:08 UTC by Severswoed
+   Updated: 2025-08-26 04:01:47 UTC by Severswoed
    ============================================================================ */
 
 /* ============================================================================
@@ -316,12 +316,14 @@ body.dark-mode .menu-icon-svg:hover {
   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
   padding: 1.2rem;
   min-width: 220px;
-  z-index: 9999;
+  z-index: 10000; /* High z-index */
   display: none;
   opacity: 0;
   transform: translateY(-10px);
   transition: all 0.2s ease;
   pointer-events: none;
+  /* Ensure no interference */
+  isolation: isolate;
 }
 
 /* Show mobile menu when triggered */
@@ -339,9 +341,10 @@ body.dark-mode .trigger {
   box-shadow: 0 6px 20px rgba(255,255,255,0.1);
 }
 
-/* FIXED: Mobile page links - clickable */
+/* FIXED: Mobile page links - ensure they're fully clickable */
 .mobile-page-link {
-  display: block;
+  display: flex;
+  align-items: center;
   color: var(--budsy-nav-link);
   text-decoration: none;
   padding: 1rem 0;
@@ -351,18 +354,30 @@ body.dark-mode .trigger {
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
   font-size: 1rem;
   position: relative;
-  z-index: 10000;
+  z-index: 10001; /* Higher z-index */
   cursor: pointer;
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  /* Ensure full width clickable area */
+  width: 100%;
+  box-sizing: border-box;
+  /* Better touch targets */
+  min-height: 44px;
 }
 
 .mobile-page-link:last-child {
   border-bottom: none;
 }
 
-.mobile-page-link:hover {
+.mobile-page-link:hover,
+.mobile-page-link:active,
+.mobile-page-link:focus {
   color: var(--budsy-title);
   text-shadow: 0 0 8px rgba(246, 169, 160, 0.4);
   padding-left: 0.5rem;
+  background-color: rgba(137,177,83,0.05); /* Add background on interaction */
 }
 
 /* Dark mode mobile links */
@@ -372,9 +387,12 @@ body.dark-mode .mobile-page-link {
   text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
-body.dark-mode .mobile-page-link:hover {
+body.dark-mode .mobile-page-link:hover,
+body.dark-mode .mobile-page-link:active,
+body.dark-mode .mobile-page-link:focus {
   color: var(--budsy-title);
   text-shadow: 0 0 8px rgba(255, 155, 146, 0.6);
+  background-color: rgba(164,199,102,0.05);
 }
 
 /* Launch Status Styles */
@@ -1308,5 +1326,5 @@ body.page-privacy .page-content a:hover {
 
 /* ============================================================================
    END OF BUDSY THEME STYLES
-   Updated: 2025-08-26 03:55:08 UTC by Severswoed
+   Updated: 2025-08-26 04:01:47 UTC by Severswoed
    ============================================================================ */
