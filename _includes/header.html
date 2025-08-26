@@ -24,11 +24,9 @@
           {%- endfor -%}
         </div>
         
-        <!-- Minimal CTA -->
+        <!-- CTA Button using theme -->
         <div class="header-cta">
-          <a href="mailto:{{ site.email | default: site.contact_email }}" style="background: var(--budsy-accent); color: white; padding: 0.7rem 1.4rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; box-shadow: 0 2px 8px rgba(214, 102, 130, 0.25); transition: all 0.3s ease;">
-            Get Updates
-          </a>
+          <a href="mailto:{{ site.email | default: site.contact_email }}" class="btn">Get Updates</a>
         </div>
       </nav>
 
@@ -51,16 +49,14 @@
             {%- endif -%}
           {%- endfor -%}
           <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(137,177,83,0.2);">
-            <a href="mailto:{{ site.email | default: site.contact_email }}" style="display: block; text-align: center; background: var(--budsy-accent); color: white; padding: 0.8rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
-              Get Updates
-            </a>
+            <a href="mailto:{{ site.email | default: site.contact_email }}" class="btn" style="display: block; text-align: center; margin: 0;">Get Updates</a>
           </div>
         </div>
       </nav>
       {%- endif -%}
     </div>
 
-    <!-- Simple Launch Status (Optional - can be removed if too much) -->
+    <!-- Simple Launch Status -->
     <div class="launch-status" style="text-align: center; padding: 0.6rem; background: rgba(137,177,83,0.08); border-radius: 6px; margin-top: 0.5rem;">
       <span style="font-size: 0.85rem; color: var(--budsy-subtitle); font-weight: 500;">🚀 Live in Mississippi • Florida coming soon</span>
     </div>
@@ -80,9 +76,9 @@
   .desktop-nav { display: flex !important; }
 }
 
-/* Clean hover effects */
+/* Clean hover effects for navigation links */
 .page-link:hover {
-  color: var(--budsy-accent) !important;
+  color: var(--budsy-title) !important;
 }
 
 .page-link::after {
@@ -92,7 +88,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--budsy-accent);
+  background: var(--budsy-title);
   transition: width 0.3s ease;
 }
 
@@ -100,9 +96,11 @@
   width: 100%;
 }
 
-.header-cta a:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(214, 102, 130, 0.4) !important;
+/* Header-specific button adjustments */
+.header-cta .btn {
+  margin: 0;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.9rem;
 }
 
 /* Mobile menu toggle */

@@ -83,40 +83,48 @@ title: Home
   </div>
 </div>
 
-<div style="background: linear-gradient(135deg, #F5F1E8 0%, #EFE9E0 100%); padding: 4rem 0; margin-top: 4rem; border-radius: 20px; border: 1px solid rgba(137, 177, 83, 0.3);">
+<div style="background: var(--budsy-cream); padding: 4rem 0; margin-top: 4rem; border-radius: 20px; border: 1px solid rgba(137, 177, 83, 0.3);">
   <div class="wrapper" style="text-align: center;">
-    <h2 style="color: var(--budsy-h2); text-shadow: 0 0 15px rgba(214, 102, 130, 0.5);">About budsyapp</h2>
+    <h2 style="color: var(--budsy-h2); text-shadow: 0 0 15px rgba(246, 169, 160, 0.3); margin-bottom: 2rem;">About budsyapp</h2>
     <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.6; color: var(--budsy-text);">
       budsyapp serves both medical cannabis patients requiring precise legal compliance and recreational users wanting detailed experience tracking. Built with enterprise-level privacy and medical-grade accuracy, combining comprehensive cannabis management with educational resources to empower informed decisions.
     </p>
     
-    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.6); border-radius: 10px; border: 1px solid rgba(137, 177, 83, 0.2);">
-      <h4 style="color: var(--budsy-h2); margin-bottom: 1rem;">🚀 Launch Status</h4>
-      <p style="margin-bottom: 0.5rem;"><strong>Mississippi:</strong> Full launch with complete purchase logging and state compliance</p>
-      <p><strong>Florida:</strong> Soft launch with medical purchase logging support</p>
+    <div style="margin-top: 2.5rem; padding: 2rem; background: rgba(255, 255, 255, 0.9); border-radius: 15px; border: 1px solid rgba(137, 177, 83, 0.25); box-shadow: 0 4px 20px rgba(137, 177, 83, 0.15);">
+      <h4 style="color: var(--budsy-h2); margin-bottom: 1.5rem; font-size: 1.2rem;">🚀 Launch Status</h4>
+      <div style="display: flex; justify-content: center; gap: 3rem; margin-bottom: 1rem; flex-wrap: wrap;">
+        <div style="text-align: center;">
+          <p style="margin: 0; font-size: 1rem;"><strong style="color: var(--budsy-title);">Mississippi:</strong></p>
+          <p style="margin: 0.3rem 0 0 0; color: var(--budsy-text); font-size: 0.9rem;">Full launch with complete purchase logging and state compliance</p>
+        </div>
+        <div style="text-align: center;">
+          <p style="margin: 0; font-size: 1rem;"><strong style="color: var(--budsy-title);">Florida:</strong></p>
+          <p style="margin: 0.3rem 0 0 0; color: var(--budsy-text); font-size: 0.9rem;">Soft launch with medical purchase logging support</p>
+        </div>
+      </div>
     </div>
     
     <div style="margin-top: 2rem;">
       <a href="https://github.com/{{ site.github_org }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Follow Development</a>
     </div>
     
-    <h3 style="margin-top: 3rem; color: var(--budsy-h2); text-shadow: 0 0 10px rgba(214, 102, 130, 0.4);">Why Choose budsyapp?</h3>
-    <div style="display: flex; justify-content: center; margin-top: 1rem;">
+    <h3 style="margin-top: 3rem; color: var(--budsy-h2); text-shadow: 0 0 10px rgba(246, 169, 160, 0.2);">Why Choose budsyapp?</h3>
+    <div style="display: flex; justify-content: center; margin-top: 1.5rem;">
       <ul style="list-style: none; padding: 0; color: var(--budsy-text); text-align: left; max-width: 500px; margin: 0 auto;">
-        <li style="margin-bottom: 0.5rem;">🏥 Medical focused with recreational support</li>
-        <li style="margin-bottom: 0.5rem;">🔐 Zero cloud storage - data stays on your device</li>
-        <li style="margin-bottom: 0.5rem;">⚖️ State specific legal compliance built-in</li>
-        <li style="margin-bottom: 0.5rem;">🎓 Comprehensive cannabis education included</li>
-        <li style="margin-bottom: 0.5rem;">♿ Accessibility first design for all users</li>
-        <li style="margin-bottom: 0.5rem;">📱 Works completely offline when needed</li>
+        <li style="margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.5rem;">🏥 Medical focused with recreational support</li>
+        <li style="margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.5rem;">🔐 Zero cloud storage - data stays on your device</li>
+        <li style="margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.5rem;">⚖️ State specific legal compliance built-in</li>
+        <li style="margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.5rem;">🎓 Comprehensive cannabis education included</li>
+        <li style="margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.5rem;">♿ Accessibility first design for all users</li>
+        <li style="margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.5rem;">📱 Works completely offline when needed</li>
       </ul>
     </div>
   </div>
 </div>
 
-<div style="text-align: center; padding: 3rem 0; background: linear-gradient(135deg, #FFF8E7 0%, #F5F1E8 100%); color: var(--budsy-text); margin: 4rem -15px 0 -15px; border-top: 1px solid rgba(137, 177, 83, 0.3);">
+<div style="text-align: center; padding: 3rem 0; background: linear-gradient(135deg, var(--budsy-cream) 0%, #F5F1E8 100%); color: var(--budsy-text); margin: 4rem -15px 0 -15px; border-top: 1px solid rgba(137, 177, 83, 0.3);">
   <div class="wrapper">
-    <h2 style="color: var(--budsy-h2); text-shadow: 0 0 15px rgba(214, 102, 130, 0.5);">Ready to Get Started?</h2>
+    <h2 style="color: var(--budsy-h2); text-shadow: 0 0 15px rgba(246, 169, 160, 0.3);">Ready to Get Started?</h2>
     <p style="font-size: 1.1rem; margin-bottom: 2rem;">Join the budsyapp community and take control of your cannabis journey with professional-grade privacy, precision, and education.</p>
     <a href="#features" class="btn btn-primary">Coming Soon</a>
   </div>
