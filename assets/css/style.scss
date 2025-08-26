@@ -5,7 +5,7 @@
 /* ============================================================================
    BUDSY CUSTOM STYLES - PROFESSIONAL & ELEGANT
    Complete theme with light/dark mode support
-   Updated: 2025-08-26 03:21:55 UTC by Severswoed
+   Updated: 2025-08-26 03:28:49 UTC by Severswoed
    ============================================================================ */
 
 /* ============================================================================
@@ -1017,20 +1017,44 @@ body.page-privacy .page-content a:hover {
 }
 
 /* ============================================================================
-   RESPONSIVE DESIGN - MOBILE STYLES (FIXED)
+   RESPONSIVE DESIGN - MOBILE STYLES (FIXED LAYOUT ISSUE)
    ============================================================================ */
 @media (max-width: 768px) {
-  /* Header Responsive - FIXED LAYOUT */
+  /* Header Responsive - FIXED INITIAL LOAD LAYOUT */
   .desktop-nav { 
-    display: none; 
+    display: none !important; /* Force hide */
   }
   
   .mobile-nav { 
-    display: block; 
+    display: block !important; /* Force show */
   }
   
-  .launch-status { 
-    margin-top: 0.8rem; 
+  /* FIX: Force proper header layout from start */
+  .site-header {
+    padding: 0.5rem 0; /* Reduced padding for mobile */
+  }
+  
+  .header-content {
+    display: flex !important; /* Force flex */
+    flex-direction: row !important; /* Force horizontal */
+    justify-content: space-between !important; /* Force space between */
+    align-items: center !important; /* Force center alignment */
+    gap: 1rem;
+    padding: 0; /* Remove extra padding */
+    text-align: left; /* Reset text alignment */
+  }
+  
+  /* FIX: Ensure header brand stays on left */
+  .header-brand {
+    flex: 0 0 auto; /* Don't grow or shrink */
+    order: 1; /* First item */
+  }
+  
+  /* FIX: Ensure mobile nav stays on right */
+  .mobile-nav {
+    flex: 0 0 auto; /* Don't grow or shrink */
+    order: 2; /* Second item */
+    margin-left: auto; /* Push to right */
   }
   
   .header-logo {
@@ -1038,25 +1062,15 @@ body.page-privacy .page-content a:hover {
     height: 56px;
   }
   
-  /* FIX: Keep header content horizontal, not vertical */
-  .header-content {
-    flex-direction: row; /* CHANGED BACK TO ROW */
-    justify-content: space-between;
+  /* FIX: Mobile navigation controls layout */
+  .mobile-nav-controls {
+    display: flex !important;
+    flex-direction: row !important;
     align-items: center;
-    gap: 1rem;
-    text-align: left; /* CHANGED BACK TO LEFT */
-    padding: 0.5rem 0; /* REDUCED PADDING */
+    gap: 0.5rem;
+    position: relative;
   }
   
-  /* FIX: Don't reorder elements on mobile */
-  .site-nav {
-    order: unset; /* REMOVED ORDER */
-  }
-  
-  .header-brand {
-    order: unset; /* REMOVED ORDER */
-  }
-
   /* Mobile Navigation Responsive */
   .trigger {
     right: 1rem;
@@ -1065,12 +1079,12 @@ body.page-privacy .page-content a:hover {
     max-width: 280px;
   }
   
-  .mobile-nav-controls {
-    gap: 0.5rem;
-  }
-  
   .nav-trigger-label {
     padding: 0.6rem;
+  }
+  
+  .launch-status { 
+    margin-top: 0.8rem; 
   }
 
   /* Hero Responsive */
@@ -1179,11 +1193,11 @@ body.page-privacy .page-content a:hover {
 
 @media (min-width: 769px) {
   .mobile-nav { 
-    display: none; 
+    display: none !important;
   }
   
   .desktop-nav { 
-    display: flex; 
+    display: flex !important;
   }
 }
 
@@ -1235,28 +1249,28 @@ body.page-privacy .page-content a:hover {
     font-size: 0.95rem;
   }
   
-  /* FIX: Extra small screen header adjustments */
+  /* Extra small screen header adjustments */
   .header-content {
-    padding: 0.3rem 0; /* EVEN LESS PADDING */
+    padding: 0; /* No extra padding */
   }
   
   .header-logo {
-    width: 48px; /* SMALLER LOGO */
+    width: 48px; /* Smaller logo */
     height: 48px;
   }
   
   .mobile-theme-toggle {
-    width: 36px; /* SMALLER BUTTONS */
+    width: 36px; /* Smaller buttons */
     height: 36px;
     font-size: 1rem;
   }
   
   .nav-trigger-label {
-    padding: 0.4rem; /* SMALLER CLICKABLE AREA */
+    padding: 0.4rem; /* Smaller clickable area */
   }
 }
 
 /* ============================================================================
    END OF BUDSY THEME STYLES
-   Updated: 2025-08-26 03:21:55 UTC by Severswoed
+   Updated: 2025-08-26 03:28:49 UTC by Severswoed
    ============================================================================ */
