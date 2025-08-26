@@ -15,9 +15,9 @@ title: Home
   </div>
 </div>
 
-<div class="features" id="features" style="padding: 4rem 0; margin: 4rem auto;">
+<div class="features" id="features" style="padding: 3rem 0; margin: 2rem auto;">
   <div class="wrapper">
-    <h2 style="text-align: center; margin-bottom: 3rem; color: var(--budsy-h2);">Everything You Need to Manage Your Journey</h2>
+    <h2 style="text-align: center; margin-bottom: 2.5rem; color: var(--budsy-h2);">Everything You Need to Manage Your Journey</h2>
     
     <div class="feature-grid">
       <div class="feature-card">
@@ -83,15 +83,15 @@ title: Home
   </div>
 </div>
 
-<div style="background: linear-gradient(135deg, #FFF8E7 0%, #F5F1E8 100%); padding: 4rem 0; margin: 4rem auto; border-radius: 15px; border: 1px solid rgba(137, 177, 83, 0.2); border-left: 4px solid var(--budsy-subtitle); max-width: calc(100% - 30px); box-shadow: 0 5px 20px rgba(137, 177, 83, 0.15);">
+<div style="background: linear-gradient(135deg, #FFF8E7 0%, #F5F1E8 100%); padding: 3rem 0; margin: 2rem auto; border-radius: 15px; border: 1px solid rgba(137, 177, 83, 0.2); border-left: 4px solid var(--budsy-subtitle); max-width: calc(100% - 30px); box-shadow: 0 5px 20px rgba(137, 177, 83, 0.15);">
   <div class="wrapper" style="text-align: center;">
-    <h2 style="color: var(--budsy-h2); text-shadow: 0 0 15px rgba(246, 169, 160, 0.3); margin-bottom: 2rem;">About budsyapp</h2>
+    <h2 style="color: var(--budsy-h2); text-shadow: 0 0 15px rgba(246, 169, 160, 0.3); margin-bottom: 1.5rem;">About budsyapp</h2>
     <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.6; color: var(--budsy-text);">
       budsyapp serves both medical cannabis patients requiring precise legal compliance and recreational users wanting detailed experience tracking. Built with enterprise-level privacy and medical-grade accuracy, combining comprehensive cannabis management with educational resources to empower informed decisions.
     </p>
     
-    <div style="margin-top: 2.5rem; padding: 2rem; background: rgba(255, 255, 255, 0.9); border-radius: 15px; border: 1px solid rgba(137, 177, 83, 0.25); box-shadow: 0 4px 20px rgba(137, 177, 83, 0.15);">
-      <h4 style="color: var(--budsy-h2); margin-bottom: 1.5rem; font-size: 1.2rem;">🚀 Launch Status</h4>
+    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 15px; border: 1px solid rgba(137, 177, 83, 0.25); box-shadow: 0 4px 20px rgba(137, 177, 83, 0.15);">
+      <h4 style="color: var(--budsy-h2); margin-bottom: 1rem; font-size: 1.2rem;">🚀 Launch Status</h4>
       <div style="display: flex; justify-content: center; gap: 3rem; margin-bottom: 1rem; flex-wrap: wrap;">
         <div style="text-align: center;">
           <p style="margin: 0; font-size: 1rem;"><strong style="color: var(--budsy-title);">Mississippi:</strong></p>
@@ -104,12 +104,12 @@ title: Home
       </div>
     </div>
     
-    <div style="margin-top: 2rem;">
+    <div style="margin-top: 1.5rem;">
       <a href="https://github.com/{{ site.github_org }}" class="btn" target="_blank" rel="noopener noreferrer">Follow Development</a>
     </div>
     
-    <h3 style="margin-top: 3rem; color: var(--budsy-h2); text-shadow: 0 0 10px rgba(246, 169, 160, 0.2);">Why Choose budsyapp?</h3>
-    <div style="display: flex; justify-content: center; margin-top: 1.5rem;">
+    <h3 style="margin-top: 2.5rem; color: var(--budsy-h2); text-shadow: 0 0 10px rgba(246, 169, 160, 0.2);">Why Choose budsyapp?</h3>
+    <div style="display: flex; justify-content: center; margin-top: 1rem;">
       <ul style="list-style: none; padding: 0; color: var(--budsy-text); text-align: left; max-width: 500px; margin: 0 auto;">
         <li style="margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.5rem;">🏥 Medical focused with recreational support</li>
         <li style="margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.5rem;">🔐 Zero cloud storage - data stays on your device</li>
@@ -122,7 +122,7 @@ title: Home
   </div>
 </div>
 
-<div style="background: linear-gradient(135deg, #FFF8E7 0%, #F5F1E8 100%); padding: 3rem 0; margin: 4rem auto 2rem auto; border-radius: 15px; border: 1px solid rgba(137, 177, 83, 0.2); border-left: 4px solid var(--budsy-subtitle); max-width: calc(100% - 30px); box-shadow: 0 5px 20px rgba(137, 177, 83, 0.15); text-align: center;">
+<div style="background: linear-gradient(135deg, #FFF8E7 0%, #F5F1E8 100%); padding: 3rem 0; margin: 2rem auto 2rem auto; border-radius: 15px; border: 1px solid rgba(137, 177, 83, 0.2); border-left: 4px solid var(--budsy-subtitle); max-width: calc(100% - 30px); box-shadow: 0 5px 20px rgba(137, 177, 83, 0.15); text-align: center;">
   <div class="wrapper">
     <h2 style="color: var(--budsy-h2); text-shadow: 0 0 15px rgba(246, 169, 160, 0.3);">Ready to Get Started?</h2>
     <p style="font-size: 1.1rem; margin-bottom: 2rem;">Join the budsyapp community and take control of your cannabis journey with professional-grade privacy, precision, and education.</p>
