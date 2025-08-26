@@ -5,7 +5,7 @@
 /* ============================================================================
    BUDSY CUSTOM STYLES - PROFESSIONAL & ELEGANT
    Complete theme with light/dark mode support
-   Updated: 2025-08-26 03:14:57 UTC by Severswoed
+   Updated: 2025-08-26 03:21:55 UTC by Severswoed
    ============================================================================ */
 
 /* ============================================================================
@@ -1017,10 +1017,10 @@ body.page-privacy .page-content a:hover {
 }
 
 /* ============================================================================
-   RESPONSIVE DESIGN - MOBILE STYLES
+   RESPONSIVE DESIGN - MOBILE STYLES (FIXED)
    ============================================================================ */
 @media (max-width: 768px) {
-  /* Header Responsive */
+  /* Header Responsive - FIXED LAYOUT */
   .desktop-nav { 
     display: none; 
   }
@@ -1038,23 +1038,28 @@ body.page-privacy .page-content a:hover {
     height: 56px;
   }
   
+  /* FIX: Keep header content horizontal, not vertical */
   .header-content {
-    flex-direction: column;
+    flex-direction: row; /* CHANGED BACK TO ROW */
+    justify-content: space-between;
+    align-items: center;
     gap: 1rem;
-    text-align: center;
+    text-align: left; /* CHANGED BACK TO LEFT */
+    padding: 0.5rem 0; /* REDUCED PADDING */
   }
   
+  /* FIX: Don't reorder elements on mobile */
   .site-nav {
-    order: 2;
+    order: unset; /* REMOVED ORDER */
   }
   
   .header-brand {
-    order: 1;
+    order: unset; /* REMOVED ORDER */
   }
 
   /* Mobile Navigation Responsive */
   .trigger {
-    right: 1rem; /* Better positioning on mobile */
+    right: 1rem;
     left: auto;
     width: calc(100vw - 4rem);
     max-width: 280px;
@@ -1229,9 +1234,29 @@ body.page-privacy .page-content a:hover {
     padding: 0.8rem 0;
     font-size: 0.95rem;
   }
+  
+  /* FIX: Extra small screen header adjustments */
+  .header-content {
+    padding: 0.3rem 0; /* EVEN LESS PADDING */
+  }
+  
+  .header-logo {
+    width: 48px; /* SMALLER LOGO */
+    height: 48px;
+  }
+  
+  .mobile-theme-toggle {
+    width: 36px; /* SMALLER BUTTONS */
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .nav-trigger-label {
+    padding: 0.4rem; /* SMALLER CLICKABLE AREA */
+  }
 }
 
 /* ============================================================================
    END OF BUDSY THEME STYLES
-   Updated: 2025-08-26 03:14:57 UTC by Severswoed
+   Updated: 2025-08-26 03:21:55 UTC by Severswoed
    ============================================================================ */
