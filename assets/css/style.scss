@@ -5,7 +5,7 @@
 /* ============================================================================
    BUDSY CUSTOM STYLES - PROFESSIONAL & ELEGANT
    Complete theme with light/dark mode support
-   Updated: 2025-08-26 03:50:07 UTC by Severswoed
+   Updated: 2025-08-26 03:55:08 UTC by Severswoed
    ============================================================================ */
 
 /* ============================================================================
@@ -103,7 +103,7 @@ body {
 }
 
 /* ============================================================================
-   HEADER STYLES - NEW LAYOUT
+   HEADER STYLES - FIXED LAYOUT
    ============================================================================ */
 .site-header {
   background: var(--budsy-cream);
@@ -113,7 +113,7 @@ body {
   transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* NEW: Header Layout - Logo Left, Controls Right */
+/* Header Layout - Logo Left, Controls Right */
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -122,7 +122,7 @@ body {
 }
 
 .header-brand {
-  flex: 0 0 auto; /* Don't grow or shrink */
+  flex: 0 0 auto;
   order: 1; /* First item - LEFT */
 }
 
@@ -156,7 +156,6 @@ body {
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
   order: 2; /* Second item - RIGHT */
 }
 
@@ -244,7 +243,7 @@ body {
    MOBILE NAVIGATION STYLES - FIXED
    ============================================================================ */
 
-/* NEW: Mobile Navigation Wrapper - RIGHT SIDE */
+/* Mobile Navigation Wrapper - RIGHT SIDE */
 .mobile-nav-wrapper {
   display: none; /* Hidden by default, shown on mobile */
   align-items: center;
@@ -260,7 +259,7 @@ body {
   display: none;
 }
 
-/* Fix nav trigger label clickable area */
+/* Nav trigger label clickable area */
 .nav-trigger-label {
   cursor: pointer;
   padding: 0.8rem;
@@ -340,7 +339,7 @@ body.dark-mode .trigger {
   box-shadow: 0 6px 20px rgba(255,255,255,0.1);
 }
 
-/* FIXED: Mobile page links - ensure they're clickable */
+/* FIXED: Mobile page links - clickable */
 .mobile-page-link {
   display: block;
   color: var(--budsy-nav-link);
@@ -348,7 +347,7 @@ body.dark-mode .trigger {
   padding: 1rem 0;
   border-bottom: 1px solid rgba(137,177,83,0.1);
   font-weight: 600;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
+  transition: color 0.2s ease, text-shadow 0.2s ease, padding-left 0.2s ease;
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
   font-size: 1rem;
   position: relative;
@@ -1073,7 +1072,7 @@ body.page-privacy .page-content a:hover {
    RESPONSIVE DESIGN - MOBILE STYLES
    ============================================================================ */
 @media (max-width: 768px) {
-  /* Header Responsive - NEW LAYOUT */
+  /* Header Responsive - FIXED LAYOUT */
   .desktop-nav { 
     display: none !important;
   }
@@ -1309,5 +1308,5 @@ body.page-privacy .page-content a:hover {
 
 /* ============================================================================
    END OF BUDSY THEME STYLES
-   Updated: 2025-08-26 03:50:07 UTC by Severswoed
+   Updated: 2025-08-26 03:55:08 UTC by Severswoed
    ============================================================================ */
