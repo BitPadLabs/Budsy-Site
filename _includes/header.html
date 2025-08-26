@@ -26,7 +26,6 @@
           <!-- Theme Toggle Button -->
           <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
             <span id="theme-icon">🌙</span>
-            <span id="theme-text">Dark</span>
           </button>
         </div>
       </nav>
@@ -63,7 +62,7 @@
 
     <!-- Launch Status -->
     <div class="launch-status">
-      <span class="launch-status-text">🚀 Live in Mississippi • Florida coming soon</span>
+      <span class="launch-status-text">🚀 Mississippi Unit Support Coming Soon! 🚀 </span>
     </div>
   </div>
 </header>
@@ -73,16 +72,11 @@ function toggleTheme() {
   const body = document.body;
   const isDark = body.classList.toggle('dark-mode');
   
-  // Update toggle button text and icons
+  // Update toggle button icons only (no text)
   const icons = document.querySelectorAll('#theme-icon, #theme-icon-mobile');
-  const texts = document.querySelectorAll('#theme-text');
   
   icons.forEach(icon => {
     icon.textContent = isDark ? '☀️' : '🌙';
-  });
-  
-  texts.forEach(text => {
-    text.textContent = isDark ? '' : '';
   });
   
   // Save preference
@@ -113,10 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
     document.body.classList.add('dark-mode');
     const icons = document.querySelectorAll('#theme-icon, #theme-icon-mobile');
-    const texts = document.querySelectorAll('#theme-text');
     
     icons.forEach(icon => icon.textContent = '☀️');
-    texts.forEach(text => text.textContent = 'Light');
   }
 });
 </script>
