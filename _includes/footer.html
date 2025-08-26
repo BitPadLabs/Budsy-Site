@@ -3,6 +3,7 @@
 
   <div class="wrapper">
     <div class="footer-content">
+      <!-- Three Column Layout -->
       <div class="footer-columns" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; margin-bottom: 2rem;">
         
         <!-- Column 1: Contact & Support -->
@@ -67,8 +68,8 @@
         </div>
       </div>
 
-      <!-- Bottom Copyright Bar -->
-      <div style="padding-top: 2rem; border-top: 2px solid rgba(137,177,83,0.2); text-align: center;">
+      <!-- Bottom Copyright Bar - COMPLETELY SEPARATE FROM COLUMNS -->
+      <div class="footer-bottom" style="width: 100%; padding-top: 2rem; border-top: 2px solid rgba(137,177,83,0.2); text-align: center; clear: both;">
         <p style="margin: 0; font-size: 0.9rem; color: var(--budsy-text); opacity: 0.9; line-height: 1.6;">
           © 2025 budsyapp. Built with privacy and precision for the cannabis community.
         </p>
@@ -113,5 +114,10 @@
 
 footer a[target="_blank"]:hover svg {
   transform: scale(1.1);
+}
+
+/* Ensure bottom copyright is separate */
+.footer-bottom {
+  grid-column: 1 / -1; /* Spans all columns */
 }
 </style>
