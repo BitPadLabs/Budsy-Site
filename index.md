@@ -15,7 +15,7 @@ title: Home
   </div>
 </div>
 
-<div class="features" id="features" style="background: linear-gradient(135deg, #FFF8E7 0%, #F5F1E8 100%); padding: 4rem 0; margin: 4rem auto; border-radius: 15px; border: 1px solid rgba(137, 177, 83, 0.2); border-left: 4px solid var(--budsy-subtitle); max-width: calc(100% - 30px); box-shadow: 0 5px 20px rgba(137, 177, 83, 0.15);">
+<div class="features" id="features" style="padding: 4rem 0; margin: 4rem auto;">
   <div class="wrapper">
     <h2 style="text-align: center; margin-bottom: 3rem; color: var(--budsy-h2);">Everything You Need to Manage Your Journey</h2>
     

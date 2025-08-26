@@ -3,8 +3,8 @@
 
   <div class="wrapper">
     <div class="footer-content">
-      <!-- Three Column Layout -->
-      <div class="footer-columns" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; margin-bottom: 2rem;">
+      <!-- Three Column Layout ONLY -->
+      <div class="footer-columns" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem;">
         
         <!-- Column 1: Contact & Support -->
         <div class="footer-col footer-contact-col" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
@@ -17,11 +17,10 @@
           <img src="{{ '/assets/img/budsy-app-icon.png' | relative_url }}" alt="budsyapp" style="width: 60px; height: 60px; border-radius: 12px; box-shadow: 0 4px 12px rgba(137,177,83,0.2);" />
         </div>
 
-        <!-- Column 2: Connect & Develop (Social Links Only) -->
+        <!-- Column 2: Connect & Develop -->
         <div class="footer-col footer-social-col" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
           <h3 style="color: var(--budsy-subtitle); margin-bottom: 1rem; font-size: 1.1rem; font-weight: 600;">Connect & Develop</h3>
           
-          <!-- Social Links -->
           <div style="display: flex; gap: 1.2rem; justify-content: center;">
             <a href="https://www.facebook.com/share/16qdFXhvdk/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook" style="transition: transform 0.3s ease;">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,16 +66,16 @@
           {%- endif -%}
         </div>
       </div>
+    </div>
 
-      <!-- Bottom Copyright Bar - COMPLETELY SEPARATE FROM COLUMNS -->
-      <div class="footer-bottom" style="width: 100%; padding-top: 2rem; border-top: 2px solid rgba(137,177,83,0.2); text-align: center; clear: both;">
-        <p style="margin: 0; font-size: 0.9rem; color: var(--budsy-text); opacity: 0.9; line-height: 1.6;">
-          © 2025 budsyapp. Built with privacy and precision for the cannabis community.
-        </p>
-        <p style="margin: 0.5rem 0 0 0; font-size: 0.8rem; color: var(--budsy-text); opacity: 0.7;">
-          Medical-grade privacy • Zero cloud storage • State compliance built-in
-        </p>
-      </div>
+    <!-- COMPLETELY SEPARATE COPYRIGHT SECTION - NOT INSIDE footer-content -->
+    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid rgba(137,177,83,0.2); text-align: center;">
+      <p style="margin: 0; font-size: 0.9rem; color: var(--budsy-text); opacity: 0.9; line-height: 1.6;">
+        © 2025 budsyapp. Built with privacy and precision for the cannabis community.
+      </p>
+      <p style="margin: 0.5rem 0 0 0; font-size: 0.8rem; color: var(--budsy-text); opacity: 0.7;">
+        Medical-grade privacy • Zero cloud storage • State compliance built-in
+      </p>
     </div>
   </div>
 </footer>
@@ -114,10 +113,5 @@
 
 footer a[target="_blank"]:hover svg {
   transform: scale(1.1);
-}
-
-/* Ensure bottom copyright is separate */
-.footer-bottom {
-  grid-column: 1 / -1; /* Spans all columns */
 }
 </style>
