@@ -3,26 +3,26 @@ layout: default
 title: Home
 ---
 
-<div class="hero">
-  <div class="wrapper">
-    <h1 class="hero-title">{{ site.title }}</h1>
-    <p class="hero-tagline">{{ site.description }}</p>
+<div style="background: linear-gradient(135deg, #FFF8E7 0%, #F5F1E8 100%); padding: 4rem 0; margin: 2rem auto; border-radius: 15px; border: 1px solid rgba(137, 177, 83, 0.2); border-left: 4px solid var(--budsy-subtitle); max-width: calc(100% - 30px); box-shadow: 0 5px 20px rgba(137, 177, 83, 0.15);">
+  <div class="wrapper" style="text-align: center;">
+    <h1 style="font-size: 3.5rem; color: var(--budsy-title); margin: 0 0 1rem 0; font-weight: 700; text-shadow: 0 2px 4px rgba(246, 169, 160, 0.3);">{{ site.title }}</h1>
+    <p style="font-size: 1.4rem; margin: 1rem 0 3rem 0; color: var(--budsy-subtitle); font-weight: 500; letter-spacing: 0.5px; max-width: 600px; margin-left: auto; margin-right: auto;">{{ site.description }}</p>
     
-    <div class="hero-buttons">
-      <a href="#features" class="btn btn-primary">Explore Features</a>
-      <a href="mailto:{{ site.contact_email }}" class="btn btn-secondary">Get Updates</a>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="#features" class="btn">Explore Features</a>
+      <a href="mailto:{{ site.contact_email }}" class="btn">Get Updates</a>
     </div>
   </div>
 </div>
 
-<div class="features" id="features">
+<div class="features" id="features" style="background: linear-gradient(135deg, #FFF8E7 0%, #F5F1E8 100%); padding: 4rem 0; margin: 4rem auto; border-radius: 15px; border: 1px solid rgba(137, 177, 83, 0.2); border-left: 4px solid var(--budsy-subtitle); max-width: calc(100% - 30px); box-shadow: 0 5px 20px rgba(137, 177, 83, 0.15);">
   <div class="wrapper">
-    <h2 style="text-align: center; margin-bottom: 3rem; color: var(--budsy-h2);">Professional Cannabis Management & Education</h2>
+    <h2 style="text-align: center; margin-bottom: 3rem; color: var(--budsy-h2);">Everything You Need to Manage Your Journey</h2>
     
     <div class="feature-grid">
       <div class="feature-card">
         <h3>📋 Purchase Logging</h3>
-        <p>Log cannabis purchases with state-specific compliance. Real-time calculations show remaining allowances within your legal limits using precise 30-day rolling windows with minute-level accuracy. <strong>Launching in Mississippi with Florida support.</strong></p>
+        <p>Log cannabis purchases with state-specific compliance. Real-time calculations show remaining allowances within your legal limits using precise 30-day rolling windows with minute-level accuracy. Never have to call the dispensary again to find out if you can re-up! <strong>Launching in Mississippi with Florida support.</strong></p>
       </div>
       
       <div class="feature-card">
@@ -37,7 +37,7 @@ title: Home
       
       <div class="feature-card">
         <h3>⚖️ State-Specific Legal Compliance</h3>
-        <p>Understand your state's cannabis laws with automatic conversion between product types (flower, concentrates, edibles). Real-time legal updates and compliance alerts when approaching limits with educational content.</p>
+        <p>Understand your state's cannabis laws with automatic conversion between product types (flower, concentrates, edibles) conversions for ounces, grams, and unit normalizations. Real-time legal updates and compliance alerts when approaching limits and units returning along with educational content.</p>
       </div>
       
       <div class="feature-card">
@@ -83,7 +83,7 @@ title: Home
   </div>
 </div>
 
-<div style="background: var(--budsy-cream); padding: 4rem 0; margin-top: 4rem; border-radius: 20px; border: 1px solid rgba(137, 177, 83, 0.3);">
+<div style="background: linear-gradient(135deg, #FFF8E7 0%, #F5F1E8 100%); padding: 4rem 0; margin: 4rem auto; border-radius: 15px; border: 1px solid rgba(137, 177, 83, 0.2); border-left: 4px solid var(--budsy-subtitle); max-width: calc(100% - 30px); box-shadow: 0 5px 20px rgba(137, 177, 83, 0.15);">
   <div class="wrapper" style="text-align: center;">
     <h2 style="color: var(--budsy-h2); text-shadow: 0 0 15px rgba(246, 169, 160, 0.3); margin-bottom: 2rem;">About budsyapp</h2>
     <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.6; color: var(--budsy-text);">
@@ -105,7 +105,7 @@ title: Home
     </div>
     
     <div style="margin-top: 2rem;">
-      <a href="https://github.com/{{ site.github_org }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Follow Development</a>
+      <a href="https://github.com/{{ site.github_org }}" class="btn" target="_blank" rel="noopener noreferrer">Follow Development</a>
     </div>
     
     <h3 style="margin-top: 3rem; color: var(--budsy-h2); text-shadow: 0 0 10px rgba(246, 169, 160, 0.2);">Why Choose budsyapp?</h3>
@@ -122,10 +122,10 @@ title: Home
   </div>
 </div>
 
-<div style="text-align: center; padding: 3rem 0; background: linear-gradient(135deg, var(--budsy-cream) 0%, #F5F1E8 100%); color: var(--budsy-text); margin: 4rem -15px 0 -15px; border-top: 1px solid rgba(137, 177, 83, 0.3);">
+<div style="background: linear-gradient(135deg, #FFF8E7 0%, #F5F1E8 100%); padding: 3rem 0; margin: 4rem auto 2rem auto; border-radius: 15px; border: 1px solid rgba(137, 177, 83, 0.2); border-left: 4px solid var(--budsy-subtitle); max-width: calc(100% - 30px); box-shadow: 0 5px 20px rgba(137, 177, 83, 0.15); text-align: center;">
   <div class="wrapper">
     <h2 style="color: var(--budsy-h2); text-shadow: 0 0 15px rgba(246, 169, 160, 0.3);">Ready to Get Started?</h2>
     <p style="font-size: 1.1rem; margin-bottom: 2rem;">Join the budsyapp community and take control of your cannabis journey with professional-grade privacy, precision, and education.</p>
-    <a href="#features" class="btn btn-primary">Coming Soon</a>
+    <a href="#features" class="btn">Coming Soon</a>
   </div>
 </div>
