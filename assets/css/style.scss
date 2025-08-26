@@ -5,7 +5,7 @@
 /* ============================================================================
    BUDSY CUSTOM STYLES - PROFESSIONAL & ELEGANT
    Complete theme with light/dark mode support
-   Updated: 2025-08-26 03:35:41 UTC by Severswoed
+   Updated: 2025-08-26 03:41:57 UTC by Severswoed
    ============================================================================ */
 
 /* ============================================================================
@@ -30,6 +30,9 @@
   --budsy-navy: #2C3E50; /* Navy accent */
   --budsy-card-background: #FFFFFF;
   --budsy-card-shadow: rgba(137, 177, 83, 0.15);
+  
+  /* Enhanced theme transition variables */
+  transition: all 0.2s ease;
 }
 
 /* Dark mode colors */
@@ -54,23 +57,39 @@ body.dark-mode {
 }
 
 /* ============================================================================
-   GLOBAL STYLES
+   ENHANCED THEME TRANSITIONS - PREVENT STROBING
    ============================================================================ */
-html, body {
+
+/* Ensure smooth transitions without flashing */
+html {
+  background-color: var(--budsy-cream);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+html.dark-mode {
+  background-color: var(--budsy-cream);
+}
+
+/* Prevent flash of unstyled content during theme switches */
+body {
   background: var(--budsy-cream);
   color: var(--budsy-text);
   margin: 0;
   padding: 0;
   font-family: 'Nunito', 'Georgia', 'Times New Roman', serif;
   min-height: 100vh;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
 }
 
+/* ============================================================================
+   GLOBAL STYLES
+   ============================================================================ */
 .wrapper {
   background: transparent;
   color: var(--budsy-text);
+  transition: color 0.2s ease;
 }
 
 .main-content {
@@ -91,7 +110,7 @@ html, body {
   border-top: 5px solid var(--budsy-subtitle);
   box-shadow: 0 2px 10px var(--budsy-card-shadow);
   padding: 1rem 0;
-  transition: background 0.3s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Header Layout and Navigation Styles */
@@ -125,6 +144,7 @@ html, body {
   font-weight: bold;
   text-shadow: 0 0 10px rgba(246, 169, 160, 0.3);
   font-size: 1.8rem;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .desktop-nav {
@@ -143,7 +163,7 @@ html, body {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  transition: all 0.3s ease;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
   padding: 0.5rem 0;
   position: relative;
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
@@ -177,7 +197,7 @@ html, body {
   border-radius: 50%; /* Changed to circular for icon-only */
   padding: 0.6rem; /* Adjusted for circular button */
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,7 +226,7 @@ html, body {
 /* Add smooth icon transition */
 #theme-icon,
 #theme-icon-mobile {
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
   line-height: 1;
 }
 
@@ -242,7 +262,7 @@ html, body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 .nav-trigger-label:hover {
@@ -265,7 +285,7 @@ body.dark-mode .nav-trigger-label:hover {
 /* Fix hamburger menu icon visibility */
 .menu-icon-svg {
   fill: var(--budsy-nav-link); /* Use nav link color instead of title */
-  transition: fill 0.3s ease;
+  transition: fill 0.2s ease;
 }
 
 .menu-icon-svg:hover {
@@ -297,7 +317,7 @@ body.dark-mode .menu-icon-svg:hover {
   display: none;
   opacity: 0;
   transform: translateY(-10px);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   pointer-events: none; /* PREVENT INTERACTION WHEN HIDDEN */
 }
 
@@ -324,7 +344,7 @@ body.dark-mode .trigger {
   padding: 1rem 0;
   border-bottom: 1px solid rgba(137,177,83,0.1);
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
   font-size: 1rem;
   will-change: color, background-color, transform;
@@ -373,12 +393,14 @@ body.dark-mode .mobile-page-link:hover {
   background: rgba(137,177,83,0.08);
   border-radius: 6px;
   margin-top: 0.5rem;
+  transition: background-color 0.2s ease;
 }
 
 .launch-status-text {
   font-size: 0.85rem;
   color: var(--budsy-subtitle);
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 /* ============================================================================
@@ -394,7 +416,7 @@ body.dark-mode .mobile-page-link:hover {
   max-width: calc(100% - 30px);
   padding: 4rem 0;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .about-section,
@@ -408,7 +430,7 @@ body.dark-mode .mobile-page-link:hover {
   max-width: calc(100% - 30px);
   padding: 3rem 0;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .section-title {
@@ -416,6 +438,7 @@ body.dark-mode .mobile-page-link:hover {
   margin-bottom: 2.5rem;
   text-align: center;
   text-shadow: 0 0 15px rgba(246, 169, 160, 0.3);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .about-description {
@@ -424,6 +447,7 @@ body.dark-mode .mobile-page-link:hover {
   line-height: 1.6;
   margin: 0 auto;
   max-width: 700px;
+  transition: color 0.2s ease;
 }
 
 .launch-status-card {
@@ -433,7 +457,7 @@ body.dark-mode .mobile-page-link:hover {
   box-shadow: 0 4px 20px var(--budsy-card-shadow);
   margin-top: 2rem;
   padding: 1.5rem;
-  transition: background 0.3s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 body.dark-mode .launch-status-card {
@@ -444,6 +468,7 @@ body.dark-mode .launch-status-card {
   color: var(--budsy-h2);
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  transition: color 0.2s ease;
 }
 
 .launch-grid {
@@ -462,12 +487,14 @@ body.dark-mode .launch-status-card {
   color: var(--budsy-title);
   font-size: 1rem;
   margin: 0;
+  transition: color 0.2s ease;
 }
 
 .launch-description {
   color: var(--budsy-text);
   font-size: 0.9rem;
   margin: 0.3rem 0 0 0;
+  transition: color 0.2s ease;
 }
 
 .follow-development {
@@ -478,6 +505,7 @@ body.dark-mode .launch-status-card {
   color: var(--budsy-h2);
   margin-top: 2.5rem;
   text-shadow: 0 0 10px rgba(246, 169, 160, 0.2);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .why-choose-container {
@@ -493,6 +521,7 @@ body.dark-mode .launch-status-card {
   max-width: 500px;
   padding: 0;
   text-align: left;
+  transition: color 0.2s ease;
 }
 
 .why-choose-item {
@@ -505,12 +534,14 @@ body.dark-mode .launch-status-card {
 .cta-title {
   color: var(--budsy-h2);
   text-shadow: 0 0 15px rgba(246, 169, 160, 0.3);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .cta-description {
   color: var(--budsy-text);
   font-size: 1.1rem;
   margin-bottom: 2rem;
+  transition: color 0.2s ease;
 }
 
 /* Hero section for home page */
@@ -521,7 +552,7 @@ body.dark-mode .launch-status-card {
   color: var(--budsy-text);
   margin: 0;
   border-bottom: 1px solid rgba(137, 177, 83, 0.2);
-  transition: background 0.3s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .hero-title {
@@ -530,6 +561,7 @@ body.dark-mode .launch-status-card {
   margin: 0 0 1rem 0;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(246, 169, 160, 0.3);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .hero-tagline {
@@ -541,6 +573,7 @@ body.dark-mode .launch-status-card {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  transition: color 0.2s ease;
 }
 
 .hero-buttons {
@@ -598,7 +631,7 @@ input[type="button"],
   background: transparent;
   color: var(--budsy-title);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   box-shadow: 0 3px 10px var(--budsy-card-shadow);
   text-align: center;
   line-height: 1.2;
@@ -638,7 +671,7 @@ input[type="button"]:active,
   background: var(--budsy-cream);
   padding: 3rem 0;
   margin: 2rem auto;
-  transition: background 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 .features .wrapper {
@@ -661,7 +694,7 @@ input[type="button"]:active,
   border-radius: 15px;
   box-shadow: 0 5px 20px var(--budsy-card-shadow);
   border: 1px solid rgba(137, 177, 83, 0.2);
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   border-left: 4px solid var(--budsy-subtitle);
 }
 
@@ -674,6 +707,7 @@ input[type="button"]:active,
   color: var(--budsy-title);
   margin-bottom: 1rem;
   text-shadow: 0 0 8px rgba(246, 169, 160, 0.18);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 /* ============================================================================
@@ -684,7 +718,7 @@ input[type="button"]:active,
   color: var(--budsy-text);
   padding: 2rem 0;
   border-top: 1px solid rgba(137, 177, 83, 0.2);
-  transition: background 0.3s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 /* Footer Layout */
@@ -715,6 +749,7 @@ input[type="button"]:active,
   margin-bottom: 1rem;
   font-size: 1.1rem;
   font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 /* Contact Column Styles */
@@ -724,6 +759,7 @@ input[type="button"]:active,
   margin-bottom: 0.7rem;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .footer-link {
@@ -731,7 +767,7 @@ input[type="button"]:active,
   text-decoration: none;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .footer-link:last-of-type {
@@ -743,6 +779,7 @@ input[type="button"]:active,
   height: 60px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(137,177,83,0.2);
+  transition: box-shadow 0.2s ease;
 }
 
 /* Social Links Styles */
@@ -783,7 +820,7 @@ input[type="button"]:active,
   padding: 0.3rem 0.8rem;
   border-radius: 6px;
   background: rgba(137,177,83,0.08);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   border: 1px solid rgba(137,177,83,0.15);
   width: fit-content;
 }
@@ -808,6 +845,7 @@ input[type="button"]:active,
   opacity: 0.7;
   font-size: 0.9rem;
   margin: 0;
+  transition: color 0.2s ease;
 }
 
 /* Copyright Section */
@@ -816,6 +854,7 @@ input[type="button"]:active,
   padding-top: 2rem;
   border-top: 2px solid rgba(137,177,83,0.2);
   text-align: center;
+  transition: border-color 0.2s ease;
 }
 
 .copyright-text {
@@ -824,6 +863,7 @@ input[type="button"]:active,
   color: var(--budsy-text);
   opacity: 0.9;
   line-height: 1.6;
+  transition: color 0.2s ease;
 }
 
 .copyright-tagline {
@@ -831,6 +871,7 @@ input[type="button"]:active,
   font-size: 0.8rem;
   color: var(--budsy-text);
   opacity: 0.7;
+  transition: color 0.2s ease;
 }
 
 /* Footer Hover Effects */
@@ -888,22 +929,26 @@ pre, code {
   color: var(--budsy-text);
   border: 1px solid var(--budsy-subtitle);
   border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 /* Style tables for theme */
 table {
   background: var(--budsy-card-background);
   border: 1px solid var(--budsy-subtitle);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 th {
   background: var(--budsy-card-background);
   color: var(--budsy-h1);
   border-bottom: 2px solid var(--budsy-subtitle);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 td {
   border-bottom: 1px solid rgba(137, 177, 83, 0.2);
+  transition: border-color 0.2s ease;
 }
 
 /* Blockquotes */
@@ -912,6 +957,7 @@ blockquote {
   border-left: 4px solid var(--budsy-subtitle);
   color: var(--budsy-text);
   border-radius: 0 10px 10px 0;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 /* Form elements */
@@ -920,6 +966,7 @@ input, textarea, select {
   color: var(--budsy-text);
   border: 1px solid var(--budsy-subtitle);
   border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 input:focus, textarea:focus, select:focus {
@@ -933,7 +980,7 @@ input:focus, textarea:focus, select:focus {
 .page-content {
   background: var(--budsy-cream);
   padding: 0;
-  transition: background 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 /* Terms and Privacy pages */
@@ -951,6 +998,7 @@ body.page-privacy .page-content .wrapper {
   border-radius: 12px;
   box-shadow: 0 4px 20px var(--budsy-card-shadow);
   border: 1px solid rgba(137, 177, 83, 0.2);
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Terms and Privacy headings */
@@ -962,6 +1010,7 @@ body.page-privacy .page-content h1 {
   text-align: center;
   border-bottom: 2px solid var(--budsy-subtitle);
   padding-bottom: 1rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 body.page-terms .page-content h2,
@@ -971,6 +1020,7 @@ body.page-privacy .page-content h2 {
   margin: 2rem 0 1rem 0;
   border-left: 4px solid var(--budsy-subtitle);
   padding-left: 1rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 body.page-terms .page-content h3,
@@ -978,6 +1028,7 @@ body.page-privacy .page-content h3 {
   color: var(--budsy-h3);
   font-size: 1.3rem;
   margin: 1.5rem 0 0.8rem 0;
+  transition: color 0.2s ease;
 }
 
 body.page-terms .page-content p,
@@ -985,6 +1036,8 @@ body.page-privacy .page-content p {
   line-height: 1.7;
   margin-bottom: 1rem;
   text-align: justify;
+  color: var(--budsy-text);
+  transition: color 0.2s ease;
 }
 
 body.page-terms .page-content ul, 
@@ -999,12 +1052,15 @@ body.page-terms .page-content li,
 body.page-privacy .page-content li {
   margin-bottom: 0.5rem;
   line-height: 1.6;
+  color: var(--budsy-text);
+  transition: color 0.2s ease;
 }
 
 body.page-terms .page-content strong,
 body.page-privacy .page-content strong {
   color: var(--budsy-h1);
   font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 body.page-terms .page-content a,
@@ -1012,7 +1068,7 @@ body.page-privacy .page-content a {
   color: var(--budsy-h2);
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 body.page-terms .page-content a:hover,
@@ -1277,5 +1333,5 @@ body.page-privacy .page-content a:hover {
 
 /* ============================================================================
    END OF BUDSY THEME STYLES
-   Updated: 2025-08-26 03:35:41 UTC by Severswoed
+   Updated: 2025-08-26 03:41:57 UTC by Severswoed
    ============================================================================ */

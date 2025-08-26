@@ -69,6 +69,7 @@
 </header>
 
 <script>
+// FIXED: Separated theme toggle from cache flush to prevent strobing
 function toggleTheme() {
   const body = document.body;
   const isDark = body.classList.toggle('dark-mode');
@@ -83,21 +84,8 @@ function toggleTheme() {
   // Save preference
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
   
-  // Force cache flush and reload for CSS
-  const timestamp = new Date().getTime();
-  const links = document.querySelectorAll('link[rel="stylesheet"]');
-  links.forEach(link => {
-    const href = link.href.split('?')[0];
-    link.href = href + '?v=' + timestamp;
-  });
-  
-  // Force a reflow to ensure styles are applied
-  document.body.offsetHeight;
-  
-  // Add a small delay and force another reflow if needed
-  setTimeout(() => {
-    document.body.offsetHeight;
-  }, 100);
+  // FIXED: Remove cache flushing - it's causing the strobe effect
+  // The CSS variables handle the theme switching smoothly without cache refresh
 }
 
 // Load saved theme on page load
@@ -111,7 +99,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     icons.forEach(icon => icon.textContent = '☀️');
   }
-}
+  
+  // FIXED: Ensure smooth theme transitions without flashing
+  // Add a small delay to ensure all elements are loaded before applying theme
+  setTimeout(() => {
+    document.body.style.transition = 'background 0.3s ease, color 0.3s ease';
+  }, 100);
+});
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', function(event) {
@@ -123,7 +117,7 @@ document.addEventListener('click', function(event) {
   }
 });
 
-// FIXED: Ensure mobile menu links work properly
+// FIXED: Ensure mobile menu links work properly without affecting theme
 document.addEventListener('DOMContentLoaded', function() {
   // Add click event listeners to mobile menu links
   const mobileLinks = document.querySelectorAll('.mobile-page-link');
@@ -135,4 +129,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// FIXED: Prevent theme flashing on page navigation
+// Maintain theme state during page transitions
+window.addEventListener('beforeunload', function() {
+  const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+  localStorage.setItem('theme', currentTheme);
+});
+
+// FIXED: Quick theme application to prevent flash of wrong theme
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.documentElement.classList.add('dark-mode');
+    document.body.classList.add('dark-mode');
+  }
+})();
 </script>
