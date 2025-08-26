@@ -34,3 +34,107 @@
     </div>
   </div>
 </header>
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    
+    <div class="header-content" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+      
+      <!-- Logo and Brand -->
+      <div class="header-brand" style="display: flex; align-items: center; gap: 0.75rem;">
+        <a href="{{ "/" | relative_url }}" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+          <img src="{{ "/assets/img/budsy-app-icon.png" | relative_url }}" alt="budsyapp" class="header-logo" style="width: 40px; height: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(137,177,83,0.15);">
+          <div class="brand-text">
+            <h1 style="margin: 0; font-size: 1.5rem; color: var(--budsy-title); font-weight: 600; line-height: 1.2;">{{ site.title | default: "budsyapp" }}</h1>
+            <p style="margin: 0; font-size: 0.8rem; color: var(--budsy-subtitle); opacity: 0.8;">Professional Cannabis Management</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      {%- if page_paths -%}
+      <nav class="site-nav desktop-nav" style="display: flex; align-items: center; gap: 2rem;">
+        <div class="nav-links" style="display: flex; gap: 1.5rem; align-items: center;">
+          {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+            <a class="page-link" href="{{ my_page.url | relative_url }}" style="color: var(--budsy-text); text-decoration: none; font-weight: 500; transition: color 0.3s ease; padding: 0.5rem 0; border-bottom: 2px solid transparent;">{{ my_page.title | escape }}</a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        
+        <!-- CTA Button -->
+        <div class="header-cta">
+          <a href="mailto:{{ site.email | default: site.contact_email }}" class="btn btn-header-cta" style="background: linear-gradient(135deg, var(--budsy-accent) 0%, #E8B4B8 100%); color: white; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; box-shadow: 0 2px 8px rgba(214, 102, 130, 0.3); transition: all 0.3s ease;">
+            Get Updates
+          </a>
+        </div>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <nav class="site-nav mobile-nav" style="display: none;">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" style="display: none;" />
+        <label for="nav-trigger" style="cursor: pointer; padding: 0.5rem;">
+          <span class="menu-icon" style="display: block; width: 24px; height: 18px; position: relative;">
+            <svg viewBox="0 0 18 15" width="24px" height="18px" style="fill: var(--budsy-title);">
+              <path d="m18,1.484c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z m0,5.125c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z m0,5.109c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger" style="position: absolute; top: 100%; right: 0; background: white; border: 1px solid rgba(137,177,83,0.2); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 1rem; min-width: 200px; z-index: 1000; display: none;">
+          {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+            <a class="page-link" href="{{ my_page.url | relative_url }}" style="display: block; color: var(--budsy-text); text-decoration: none; padding: 0.75rem 0; border-bottom: 1px solid rgba(137,177,83,0.1); font-weight: 500;">{{ my_page.title | escape }}</a>
+            {%- endif -%}
+          {%- endfor -%}
+          <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(137,177,83,0.2);">
+            <a href="mailto:{{ site.email | default: site.contact_email }}" class="btn btn-header-cta" style="display: block; text-align: center; background: linear-gradient(135deg, var(--budsy-accent) 0%, #E8B4B8 100%); color: white; padding: 0.75rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+              Get Updates
+            </a>
+          </div>
+        </div>
+      </nav>
+      {%- endif -%}
+    </div>
+
+    <!-- Launch Status Banner -->
+    <div class="launch-banner" style="background: linear-gradient(135deg, rgba(137,177,83,0.1) 0%, rgba(214,102,130,0.1) 100%); border: 1px solid rgba(137,177,83,0.2); border-radius: 8px; padding: 0.75rem; margin-top: 1rem; text-align: center;">
+      <span style="font-size: 0.9rem; color: var(--budsy-title); font-weight: 600;">🚀 Now launching in Mississippi • Florida support coming soon</span>
+    </div>
+  </div>
+</header>
+
+<style>
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .desktop-nav { display: none !important; }
+  .mobile-nav { display: block !important; }
+  .brand-text h1 { font-size: 1.2rem !important; }
+  .brand-text p { font-size: 0.7rem !important; }
+  .launch-banner { font-size: 0.8rem !important; }
+}
+
+@media (min-width: 769px) {
+  .mobile-nav { display: none !important; }
+  .desktop-nav { display: flex !important; }
+}
+
+/* Navigation hover effects */
+.page-link:hover {
+  color: var(--budsy-accent) !important;
+  border-bottom-color: var(--budsy-accent) !important;
+}
+
+.btn-header-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(214, 102, 130, 0.4) !important;
+}
+
+/* Mobile menu toggle */
+#nav-trigger:checked ~ .trigger {
+  display: block !important;
+}
+</style>

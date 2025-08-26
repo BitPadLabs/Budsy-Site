@@ -4,47 +4,85 @@
   <div class="wrapper">
     <div class="footer-content">
       <div class="footer-columns" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:2rem;">
-        <!-- Contact Us Column -->
-        <div class="footer-col footer-contact-col" style="flex:1; min-width:180px; display:flex; flex-direction:column; align-items:center;">
-          <h3 style="color:var(--budsy-subtitle);margin-bottom:0.8rem;">Contact Us</h3>
+        
+        <!-- About & Contact Column -->
+        <div class="footer-col footer-contact-col" style="flex:1; min-width:200px; display:flex; flex-direction:column; align-items:center;">
+          <h3 style="color:var(--budsy-subtitle);margin-bottom:0.8rem;">Contact & Support</h3>
           {%- if site.email -%}
-            <a class="u-email" href="mailto:{{ site.email }}" style="font-size:1.1rem; color:var(--budsy-title); margin-bottom:1rem;">{{ site.email }}</a>
+            <a class="u-email" href="mailto:{{ site.email }}" style="font-size:1rem; color:var(--budsy-title); margin-bottom:0.5rem; text-decoration:none;">{{ site.email }}</a>
           {%- endif -%}
-          <img src="{{ '/assets/img/budsy-app-icon.png' | relative_url }}" alt="budsyapp" style="max-width:90px; width:100%; height:auto; border-radius:20px; box-shadow:0 2px 10px rgba(137,177,83,0.12); margin-top:1rem;" />
+          <a href="{{ '/privacy/' | relative_url }}" style="color:var(--budsy-text); text-decoration:none; margin-bottom:0.3rem; font-size:0.9rem;">Privacy Policy</a>
+          <a href="{{ '/terms/' | relative_url }}" style="color:var(--budsy-text); text-decoration:none; margin-bottom:1rem; font-size:0.9rem;">Terms of Service</a>
+          <img src="{{ '/assets/img/budsy-app-icon.png' | relative_url }}" alt="budsyapp" style="max-width:70px; width:100%; height:auto; border-radius:15px; box-shadow:0 2px 10px rgba(137,177,83,0.12);" />
         </div>
 
-        <!-- Socials Column -->
-        <div class="footer-col footer-social-col" style="flex:1; min-width:180px; display:flex; flex-direction:column; align-items:center;">
-          <h3 style="color:var(--budsy-subtitle);margin-bottom:0.8rem;">Socials</h3>
-          <a href="https://www.facebook.com/share/16qdFXhvdk/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook" style="margin-bottom:1rem;">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="32" height="32" rx="8" fill="#F6A9A0"/>
-              <path d="M20.5 16h-2v8h-3v-8h-1.5v-2.5H15v-1.5c0-2.2 1.3-3.5 3.5-3.5h2v2.5h-2c-.5 0-.5.2-.5.5v1.5h2.5l-.5 2.5z" fill="#4A6735"/>
-            </svg>
-          </a>
-          <a href="https://www.instagram.com/budsy.app" target="_blank" rel="noopener" title="Instagram">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="32" height="32" rx="8" fill="#F6A9A0"/>
-              <path d="M21.5 10.5h-11A2 2 0 0 0 8.5 12.5v7a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2zm-5.5 8.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm4-6.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1z" fill="#4A6735"/>
-              <circle cx="16" cy="16" r="2.5" fill="#F8F6F0"/>
-            </svg>
-          </a>
+        <!-- Launch Status Column -->
+        <div class="footer-col footer-launch-col" style="flex:1; min-width:200px; display:flex; flex-direction:column; align-items:center;">
+          <h3 style="color:var(--budsy-subtitle);margin-bottom:0.8rem;">Launch Status</h3>
+          <div style="text-align:center; font-size:0.9rem; color:var(--budsy-text);">
+            <div style="margin-bottom:0.5rem;"><strong style="color:var(--budsy-title);">Mississippi:</strong> Full Launch</div>
+            <div style="margin-bottom:0.5rem;"><strong style="color:var(--budsy-title);">Florida:</strong> Soft Launch</div>
+            <div style="margin-bottom:1rem; padding:0.5rem; background:rgba(137,177,83,0.1); border-radius:8px; border:1px solid rgba(137,177,83,0.2);">
+              <strong style="color:var(--budsy-subtitle);">Coming Soon to iOS</strong>
+            </div>
+          </div>
         </div>
 
-        <!-- Contributors Column -->
-        <div class="footer-col footer-contrib-col" style="flex:1; min-width:180px; display:flex; flex-direction:column; align-items:center;">
-          <h3 style="color:var(--budsy-subtitle);margin-bottom:0.8rem;">Contributors</h3>
+        <!-- Socials & Development Column -->
+        <div class="footer-col footer-social-col" style="flex:1; min-width:200px; display:flex; flex-direction:column; align-items:center;">
+          <h3 style="color:var(--budsy-subtitle);margin-bottom:0.8rem;">Connect & Develop</h3>
+          
+          <!-- Social Links -->
+          <div style="display:flex; gap:1rem; margin-bottom:1rem;">
+            <a href="https://www.facebook.com/share/16qdFXhvdk/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="8" fill="#F6A9A0"/>
+                <path d="M20.5 16h-2v8h-3v-8h-1.5v-2.5H15v-1.5c0-2.2 1.3-3.5 3.5-3.5h2v2.5h-2c-.5 0-.5.2-.5.5v1.5h2.5l-.5 2.5z" fill="#4A6735"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/budsy.app" target="_blank" rel="noopener" title="Instagram">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="8" fill="#F6A9A0"/>
+                <path d="M21.5 10.5h-11A2 2 0 0 0 8.5 12.5v7a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2zm-5.5 8.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm4-6.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1z" fill="#4A6735"/>
+                <circle cx="16" cy="16" r="2.5" fill="#F8F6F0"/>
+              </svg>
+            </a>
+            {%- if site.github_org -%}
+            <a href="https://github.com/{{ site.github_org }}" target="_blank" rel="noopener" title="GitHub">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="8" fill="#F6A9A0"/>
+                <path d="M16 8c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4v-1.4c-2.2.5-2.7-1.1-2.7-1.1-.4-.9-.9-1.1-.9-1.1-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.8-3.7 4 .3.3.6.8.6 1.5v2.2c0 .2.1.5.5.4 3.2-1.1 5.5-4.1 5.5-7.6 0-4.4-3.6-8-8-8z" fill="#4A6735"/>
+              </svg>
+            </a>
+            {%- endif -%}
+          </div>
+
+          <!-- Contributors -->
           {%- if site.contributors -%}
-            <div class="contributor-grid" style="width:100%;">
+          <div style="text-align:center;">
+            <h4 style="color:var(--budsy-subtitle); margin-bottom:0.5rem; font-size:0.9rem;">Contributors</h4>
+            <div class="contributor-grid" style="display:flex; flex-direction:column; gap:0.3rem;">
               {%- for contributor in site.contributors -%}
-              <a href="https://github.com/{{ contributor.github | escape }}" target="_blank" class="contributor-link" style="margin-bottom:0.7rem;">
-                <svg class="svg-icon github-icon" style="margin-right:0.5rem;"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+              <a href="https://github.com/{{ contributor.github | escape }}" target="_blank" class="contributor-link" style="color:var(--budsy-text); text-decoration:none; font-size:0.8rem; display:flex; align-items:center; justify-content:center; gap:0.3rem;">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
                 <span class="contributor-name">{{ contributor.name | escape }}</span>
               </a>
               {%- endfor -%}
             </div>
+          </div>
           {%- endif -%}
         </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid rgba(137,177,83,0.2); text-align:center;">
+        <p style="margin:0; font-size:0.85rem; color:var(--budsy-text); opacity:0.8;">
+          © {{ 'now' | date: "%Y" }} budsyapp. Built with privacy and precision for the cannabis community.
+          <br>
+          <span style="font-size:0.8rem; opacity:0.6;">Medical-grade privacy • Zero cloud storage • State compliance built-in</span>
+        </p>
       </div>
     </div>
   </div>
