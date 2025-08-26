@@ -82,11 +82,27 @@ function toggleTheme() {
   });
   
   texts.forEach(text => {
-    text.textContent = isDark ? 'Light' : 'Dark';
+    text.textContent = isDark ? '' : '';
   });
   
   // Save preference
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  
+  // Force cache flush and reload for CSS
+  const timestamp = new Date().getTime();
+  const links = document.querySelectorAll('link[rel="stylesheet"]');
+  links.forEach(link => {
+    const href = link.href.split('?')[0];
+    link.href = href + '?v=' + timestamp;
+  });
+  
+  // Force a reflow to ensure styles are applied
+  document.body.offsetHeight;
+  
+  // Add a small delay and force another reflow if needed
+  setTimeout(() => {
+    document.body.offsetHeight;
+  }, 100);
 }
 
 // Load saved theme on page load

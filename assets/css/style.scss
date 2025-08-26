@@ -5,7 +5,7 @@
 /* ============================================================================
    BUDSY CUSTOM STYLES - PROFESSIONAL & ELEGANT
    Complete theme with light/dark mode support
-   Updated: 2025-08-26 by Severswoed
+   Updated: 2025-08-26 03:01:40 UTC by Severswoed
    ============================================================================ */
 
 /* ============================================================================
@@ -21,6 +21,7 @@
   --budsy-h4: #FFD700; /* Gold Star */
   --budsy-h5: #E9D240; /* Mustard */
   --budsy-text: #4A6735; /* Old Navy for text */
+  --budsy-nav-link: #4A6735; /* Navigation links */
   
   /* Additional theme colors */
   --budsy-cream: #FFF8E7; /* Cream background */
@@ -41,6 +42,7 @@ body.dark-mode {
   --budsy-h4: #FFE55C; /* Lighter gold */
   --budsy-h5: #F4E666; /* Lighter mustard */
   --budsy-text: #FFFFFF; /* White text for dark mode */
+  --budsy-nav-link: #A4C766; /* Bright green for navigation links in dark mode */
   
   /* Dark mode backgrounds and accents */
   --budsy-cream: #121212; /* Dark background */
@@ -62,6 +64,8 @@ html, body {
   font-family: 'Nunito', 'Georgia', 'Times New Roman', serif;
   min-height: 100vh;
   transition: background 0.3s ease, color 0.3s ease;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .wrapper {
@@ -71,6 +75,12 @@ html, body {
 
 .main-content {
   background: transparent;
+}
+
+/* Enhanced font smoothing and performance */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ============================================================================
@@ -129,17 +139,20 @@ html, body {
 }
 
 .page-link {
-  color: var(--budsy-text);
+  color: var(--budsy-nav-link);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.3s ease;
   padding: 0.5rem 0;
   position: relative;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  will-change: color, background-color, transform;
 }
 
 .page-link:hover {
   color: var(--budsy-title);
+  text-shadow: 0 0 8px rgba(246, 169, 160, 0.4);
 }
 
 .page-link::after {
@@ -171,6 +184,7 @@ html, body {
   color: var(--budsy-text);
   font-weight: 500;
   font-family: inherit;
+  will-change: color, background-color, transform;
 }
 
 .theme-toggle:hover {
@@ -232,16 +246,19 @@ html, body {
 
 .mobile-page-link {
   display: block;
-  color: var(--budsy-text);
+  color: var(--budsy-nav-link);
   text-decoration: none;
   padding: 0.8rem 0;
   border-bottom: 1px solid rgba(137,177,83,0.1);
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  will-change: color, background-color, transform;
 }
 
 .mobile-page-link:hover {
   color: var(--budsy-title);
+  text-shadow: 0 0 8px rgba(246, 169, 160, 0.4);
 }
 
 /* Launch Status Styles */
@@ -739,6 +756,32 @@ body.dark-mode .launch-status {
   background: rgba(164, 199, 102, 0.15);
 }
 
+body.dark-mode .page-link {
+  color: var(--budsy-nav-link);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .page-link:hover {
+  color: var(--budsy-title);
+  text-shadow: 0 0 8px rgba(255, 155, 146, 0.6);
+}
+
+body.dark-mode .mobile-page-link {
+  color: var(--budsy-nav-link);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  border-bottom-color: rgba(164,199,102,0.2);
+}
+
+body.dark-mode .mobile-page-link:hover {
+  color: var(--budsy-title);
+  text-shadow: 0 0 8px rgba(255, 155, 146, 0.6);
+}
+
+body.dark-mode .menu-icon-svg {
+  fill: var(--budsy-subtitle);
+  filter: brightness(1.2);
+}
+
 body.dark-mode .footer-logo {
   box-shadow: 0 4px 12px rgba(164,199,102,0.3);
 }
@@ -1087,5 +1130,5 @@ body.page-privacy .page-content a:hover {
 
 /* ============================================================================
    END OF BUDSY THEME STYLES
-   Updated: 2025-08-26 02:54:15 UTC by Severswoed
+   Updated: 2025-08-26 03:01:40 UTC by Severswoed
    ============================================================================ */
