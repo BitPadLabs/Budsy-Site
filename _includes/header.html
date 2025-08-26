@@ -5,16 +5,16 @@
     
     <div class="header-content" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
       
-      <!-- Simple Logo -->
+      <!-- Larger Logo -->
       <div class="header-brand">
         <a href="{{ "/" | relative_url }}" style="display: flex; align-items: center; text-decoration: none;">
-          <img src="{{ "/assets/img/budsy-app-icon.png" | relative_url }}" alt="budsyapp" class="header-logo" style="width: 44px; height: 44px; border-radius: 10px; box-shadow: 0 3px 10px rgba(137,177,83,0.2);">
+          <img src="{{ "/assets/img/budsy-app-icon.png" | relative_url }}" alt="budsyapp" class="header-logo" style="width: 64px; height: 64px; border-radius: 12px; box-shadow: 0 4px 15px rgba(137,177,83,0.25);">
         </a>
       </div>
 
-      <!-- Desktop Navigation -->
+      <!-- Desktop Navigation (No CTA Button) -->
       {%- if page_paths -%}
-      <nav class="site-nav desktop-nav" style="display: flex; align-items: center; gap: 2.5rem;">
+      <nav class="site-nav desktop-nav" style="display: flex; align-items: center;">
         <div class="nav-links" style="display: flex; gap: 2rem; align-items: center;">
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
@@ -23,14 +23,9 @@
             {%- endif -%}
           {%- endfor -%}
         </div>
-        
-        <!-- CTA Button using theme -->
-        <div class="header-cta">
-          <a href="mailto:{{ site.email | default: site.contact_email }}" class="btn">Get Updates</a>
-        </div>
       </nav>
 
-      <!-- Mobile Navigation -->
+      <!-- Mobile Navigation (No CTA Button) -->
       <nav class="site-nav mobile-nav" style="display: none;">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" style="display: none;" />
         <label for="nav-trigger" style="cursor: pointer; padding: 0.5rem;">
@@ -48,9 +43,6 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}" style="display: block; color: var(--budsy-text); text-decoration: none; padding: 0.8rem 0; border-bottom: 1px solid rgba(137,177,83,0.1); font-weight: 500; transition: color 0.3s ease;">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
-          <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(137,177,83,0.2);">
-            <a href="mailto:{{ site.email | default: site.contact_email }}" class="btn" style="display: block; text-align: center; margin: 0;">Get Updates</a>
-          </div>
         </div>
       </nav>
       {%- endif -%}
@@ -69,6 +61,12 @@
   .desktop-nav { display: none !important; }
   .mobile-nav { display: block !important; }
   .launch-status { margin-top: 0.8rem; }
+  
+  /* Slightly smaller logo on mobile */
+  .header-logo {
+    width: 56px !important;
+    height: 56px !important;
+  }
 }
 
 @media (min-width: 769px) {
@@ -94,13 +92,6 @@
 
 .page-link:hover::after {
   width: 100%;
-}
-
-/* Header-specific button adjustments */
-.header-cta .btn {
-  margin: 0;
-  padding: 0.7rem 1.4rem;
-  font-size: 0.9rem;
 }
 
 /* Mobile menu toggle */
