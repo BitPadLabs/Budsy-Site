@@ -5,7 +5,7 @@
 /* ============================================================================
    BUDSY CUSTOM STYLES - PROFESSIONAL & ELEGANT
    Complete theme with light/dark mode support
-   Updated: 2025-08-26 03:28:49 UTC by Severswoed
+   Updated: 2025-08-26 03:35:41 UTC by Severswoed
    ============================================================================ */
 
 /* ============================================================================
@@ -282,10 +282,10 @@ body.dark-mode .menu-icon-svg:hover {
   fill: var(--budsy-title);
 }
 
-/* Ensure trigger menu appears properly */
+/* FIXED: Ensure trigger is positioned relative to mobile-nav, not mobile-nav-controls */
 .trigger {
   position: absolute;
-  top: calc(100% + 10px); /* Add some spacing */
+  top: calc(100% + 10px);
   right: 0;
   background: var(--budsy-card-background);
   border: 1px solid rgba(137,177,83,0.2);
@@ -293,18 +293,20 @@ body.dark-mode .menu-icon-svg:hover {
   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
   padding: 1.2rem;
   min-width: 220px;
-  z-index: 9999; /* Higher z-index */
+  z-index: 9999;
   display: none;
   opacity: 0;
   transform: translateY(-10px);
   transition: all 0.3s ease;
+  pointer-events: none; /* PREVENT INTERACTION WHEN HIDDEN */
 }
 
-/* When trigger is checked, show menu with animation */
+/* Mobile Navigation Trigger Fix */
 #nav-trigger:checked ~ .trigger {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
+  display: block !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: all !important; /* ENSURE LINKS ARE CLICKABLE */
 }
 
 /* Dark mode trigger styling */
@@ -314,7 +316,7 @@ body.dark-mode .trigger {
   box-shadow: 0 6px 20px rgba(255,255,255,0.1);
 }
 
-/* Enhanced mobile page links */
+/* FIXED: Mobile page links - ensure they're clickable */
 .mobile-page-link {
   display: block;
   color: var(--budsy-nav-link);
@@ -326,6 +328,9 @@ body.dark-mode .trigger {
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
   font-size: 1rem;
   will-change: color, background-color, transform;
+  position: relative; /* ENSURE PROPER POSITIONING */
+  z-index: 10000; /* ENSURE LINKS ARE ON TOP */
+  cursor: pointer; /* FORCE POINTER CURSOR */
 }
 
 .mobile-page-link:last-child {
@@ -1272,5 +1277,5 @@ body.page-privacy .page-content a:hover {
 
 /* ============================================================================
    END OF BUDSY THEME STYLES
-   Updated: 2025-08-26 03:28:49 UTC by Severswoed
+   Updated: 2025-08-26 03:35:41 UTC by Severswoed
    ============================================================================ */
