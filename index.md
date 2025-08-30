@@ -124,8 +124,8 @@ title: Home
 
 <div class="cta-section">
   <div class="wrapper">
-    <h2 class="cta-title">Ready to Get Started?</h2>
-    <p class="cta-description">Join the budsyapp community and take control of your cannabis journey with professional-grade privacy, precision, and education.</p>
-    <a href="#features" class="btn">Coming Soon</a>
+  <h2 class="cta-title">Ready to Get Started?</h2>
+  <p class="cta-description">Join the budsyapp community and connect with others on our official Reddit for support, education, and updates.</p>
+  <a href="https://www.reddit.com/r/budsyapp/" class="btn" target="_blank" rel="noopener">Join the Reddit Community</a>
   </div>
 </div>
