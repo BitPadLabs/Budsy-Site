@@ -791,23 +791,69 @@ input[type="button"]:active,
   transition: box-shadow 0.2s ease;
 }
 
-/* Social Links Styles */
+/* Social Links Styles - Professional & Accessible */
 .social-links {
   display: flex;
   gap: 1.2rem;
   justify-content: center;
+  align-items: center;
 }
 
 .social-link {
-  transition: transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.social-link:focus {
+  box-shadow: 0 0 0 2px var(--budsy-title);
 }
 
 .social-link:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .social-link:hover .social-icon {
   transform: scale(1.1);
+  box-shadow: 0 2px 8px var(--budsy-card-shadow);
+}
+
+/* Ensure SVGs use theme colors for fill if not overridden */
+.social-icon rect[fill="var(--budsy-title)"] {
+  fill: var(--budsy-title);
+}
+.social-icon path[fill="var(--budsy-text)"] {
+  fill: var(--budsy-text);
+}
+.social-icon circle[fill="var(--budsy-cream)"] {
+  fill: var(--budsy-cream);
+}
+
+/* Footer heading and no-contributors for consistency */
+.footer-heading {
+  color: var(--budsy-subtitle);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.no-contributors {
+  color: var(--budsy-text);
+  opacity: 0.7;
+  font-size: 0.9rem;
+  margin: 0;
+  transition: color 0.2s ease;
 }
 
 /* Contributors Styles */
