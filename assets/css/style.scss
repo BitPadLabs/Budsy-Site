@@ -5,7 +5,7 @@
 /* ============================================================================
    BUDSY CUSTOM STYLES - PROFESSIONAL & ELEGANT
    Complete theme with light/dark mode support
-   Updated: 2025-08-26 04:01:47 UTC by Severswoed
+   Updated: 2025-08-31 14:22:58 UTC by Severswoed
    ============================================================================ */
 
 /* ============================================================================
@@ -615,6 +615,238 @@ body.dark-mode .launch-status-card {
 .logo:hover {
   box-shadow: 0 0 30px rgba(137, 177, 83, 0.5), 0 0 50px rgba(246, 169, 160, 0.3);
   transform: scale(1.05);
+}
+
+/* ============================================================================
+   iOS DOWNLOAD PAGE STYLES - USING BUDSY THEME
+   Updated: 2025-08-31 14:22:58 UTC by Severswoed
+   ============================================================================ */
+
+.download-page {
+  background: linear-gradient(135deg, var(--budsy-subtitle) 0%, var(--budsy-title) 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.download-page::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: float 20s ease-in-out infinite;
+  z-index: 1;
+}
+
+.download-page > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.download-logo {
+  width: 120px;
+  height: 120px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 24px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  animation: pulse 2s ease-in-out infinite alternate;
+}
+
+.download-logo:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  from { box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+  to { box-shadow: 0 12px 40px rgba(255,255,255,0.2); }
+}
+
+.download-title {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  background: linear-gradient(45deg, #fff, #f0f8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.download-subtitle {
+  font-size: 20px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  max-width: 450px;
+  line-height: 1.4;
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+.app-store-button {
+  background: linear-gradient(135deg, #000 0%, #333 100%);
+  color: white;
+  text-decoration: none;
+  padding: 18px 36px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  border: 2px solid rgba(255,255,255,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-store-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.app-store-button:hover {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  color: white;
+  text-decoration: none;
+  border-color: rgba(255,255,255,0.4);
+}
+
+.app-store-button:hover::before {
+  left: 100%;
+}
+
+.app-store-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top: 4px solid white;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 30px auto;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.budsy-footer {
+  margin-top: 50px;
+  opacity: 0.8;
+  font-size: 16px;
+  animation: fadeIn 1s ease-out 1.5s both;
+}
+
+.budsy-footer p {
+  margin: 10px 0;
+}
+
+.budsy-footer p:first-child {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.budsy-footer p:last-child {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.8; }
+}
+
+.redirect-info {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  animation: slideInUp 0.8s ease-out 0.8s both;
+}
+
+.redirect-info p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.redirect-info p strong {
+  font-weight: 600;
+  color: #f0f8ff;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.countdown-text {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 15px;
+  font-style: italic;
 }
 
 /* ============================================================================
@@ -1294,6 +1526,46 @@ body.page-privacy .page-content a:hover {
   body.page-privacy .page-content h2 {
     font-size: 1.4rem;
   }
+
+  /* iOS Download Page Mobile Responsive */
+  .download-page {
+    padding: 60px 15px;
+  }
+  
+  .download-title {
+    font-size: 28px;
+  }
+  
+  .download-subtitle {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  
+  .download-logo {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  
+  .app-store-button {
+    padding: 16px 28px;
+    font-size: 16px;
+  }
+  
+  .redirect-info {
+    padding: 18px;
+    margin-top: 25px;
+  }
+  
+  .budsy-footer {
+    margin-top: 40px;
+    font-size: 15px;
+  }
+  
+  .budsy-footer p:first-child {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 769px) {
@@ -1368,9 +1640,43 @@ body.page-privacy .page-content a:hover {
   .nav-trigger-label {
     padding: 0.4rem;
   }
+
+  /* iOS Download Page Small Mobile */
+  .download-page {
+    padding: 40px 10px;
+  }
+  
+  .download-title {
+    font-size: 24px;
+  }
+  
+  .download-subtitle {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  
+  .download-logo {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+  }
+  
+  .app-store-button {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+  
+  .redirect-info {
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  .redirect-info p {
+    font-size: 15px;
+  }
 }
 
 /* ============================================================================
    END OF BUDSY THEME STYLES
-   Updated: 2025-08-26 04:01:47 UTC by Severswoed
+   Updated: 2025-08-31 14:22:58 UTC by Severswoed
    ============================================================================ */

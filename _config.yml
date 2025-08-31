@@ -17,6 +17,14 @@ description: >-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.budsyapp.com" # the base hostname & protocol for your site
 
+# App-specific settings for iOS download page
+app:
+  name: "BudsyApp"
+  id: "6748842648"
+  description: "Your bud tracking buddy!"
+  store_url: "https://apps.apple.com/app/id6748842648"
+  download_redirect_url: "https://budsyapp.com/ios-download/"
+
 # Social links and contributors
 github_username: Severswoed
 github_username1: hrcassels
@@ -34,6 +42,25 @@ contributors:
     github: Severswoed
     role: Co-Developer  
 
+# SEO and social media settings
+twitter:
+  username: budsyapp
+  card: summary_large_image
+
+facebook:
+  app_id: # Add if you have a Facebook app
+  publisher: # Add your Facebook page URL
+
+logo: /assets/images/budsy-logo.png
+social:
+  name: BudsyApp
+  links:
+    - https://github.com/BitPadLabs/Budsy-Site
+    - https://twitter.com/budsyapp
+
+# Google Analytics (add your tracking ID)
+google_analytics: # G-XXXXXXXXXX
+
 # Build settings
 markdown: kramdown
 theme: minima
@@ -41,6 +68,37 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+# Ensure the ios-download page is included in build
+include:
+  - ios-download.html
+
+# Collections for better content organization (optional)
+collections:
+  features:
+    output: false
+  testimonials:
+    output: false
+
+# Default front matter for different page types
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      image: /assets/images/budsy-logo.png
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      image: /assets/images/budsy-logo.png
+
+# Sass configuration for better CSS processing
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -56,3 +114,18 @@ exclude:
   - README.md
   - LICENSE
   - .gitignore
+  - .github/
+  - package.json
+  - package-lock.json
+
+# Timezone setting
+timezone: America/New_York
+
+# Permalink structure
+permalink: pretty
+
+# Liquid settings
+liquid:
+  error_mode: warn
+  strict_filters: false
+  strict_variables: false

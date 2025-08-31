@@ -1,0 +1,81 @@
+---
+layout: default
+title: Download BudsyApp - Your Bud Tracking Buddy
+description: Download the latest version of BudsyApp for iOS - Your cannabis tracking companion
+permalink: /ios-download/
+---
+
+<!-- Smart App Banner for iOS -->
+<meta name="apple-itunes-app" content="app-id=6748842648">
+
+<div class="download-page">
+    <div class="download-logo">🌿</div>
+    
+    <h1 class="download-title">Opening BudsyApp...</h1>
+    
+    <div class="loading-spinner"></div>
+    
+    <p class="download-subtitle">
+        Taking you to the App Store to download the latest version of your bud tracking buddy!
+    </p>
+    
+    <div class="redirect-info">
+        <p id="countdown-text">
+            <strong>Redirecting automatically in 2 seconds...</strong>
+        </p>
+        
+        <a href="https://apps.apple.com/app/id6748842648" 
+           class="app-store-button" 
+           id="appStoreLink">
+            Open App Store Now
+        </a>
+    </div>
+    
+    <div class="budsy-footer">
+        <p><strong>Budsy</strong> - Your bud tracking buddy</p>
+        <p>Track your cannabis purchases and stay compliant with state limits</p>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let countdown = 2;
+    const countdownElement = document.getElementById('countdown-text');
+    
+    // Update countdown display
+    const countdownInterval = setInterval(function() {
+        countdown--;
+        if (countdown > 0) {
+            countdownElement.innerHTML = `<strong>Redirecting automatically in ${countdown} second${countdown !== 1 ? 's' : ''}...</strong>`;
+        } else {
+            countdownElement.innerHTML = '<strong>Redirecting now...</strong>';
+            clearInterval(countdownInterval);
+        }
+    }, 1000);
+    
+    // Auto-redirect after 2 seconds
+    setTimeout(function() {
+        window.location.href = "https://apps.apple.com/app/id6748842648";
+        
+        // Analytics tracking if available
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'auto_app_store_redirect', {
+                'event_category': 'app_download',
+                'event_label': 'ios_automatic_redirect',
+                'value': 1
+            });
+        }
+    }, 2000);
+    
+    // Manual button click tracking
+    document.getElementById('appStoreLink').addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'manual_app_store_click', {
+                'event_category': 'app_download',
+                'event_label': 'ios_manual_click',
+                'value': 1
+            });
+        }
+    });
+});
+</script>
