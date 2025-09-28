@@ -5,7 +5,7 @@ date: 2025-09-13 09:00:00
 author: BitPadLabs Team
 categories: [product, release]
 tags: [budsyapp, release, update]
-image: /assets/images/budsy-logo.png
+image: /assets/img/budsy-app-icon.png
 ---
 We’re excited to announce that **budsyapp v1.5** is in review for the App Store and should be available today or tomorrow!
 

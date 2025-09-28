@@ -5,7 +5,7 @@ date: 2025-08-29 18:00:00
 author: BitPadLabs Team
 categories: [event, outreach]
 tags: [budsyapp, event, outreach, dispensary]
-image: /assets/images/events/2025-08-29-far-and-dotter.JPG
+image: /assets/img/events/2025-08-29-far-and-dotter.JPG
 ---
 On August 29th, we had a fantastic time celebrating Patient Appreciation Day at Far & Dotter in Mississippi! The event was a wonderful opportunity to connect with patients, vendors, and the local community.
 

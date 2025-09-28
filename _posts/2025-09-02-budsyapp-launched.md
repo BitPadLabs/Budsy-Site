@@ -5,7 +5,7 @@ date: 2025-09-02 09:00:00
 author: BitPadLabs Team
 categories: [product, release]
 tags: [budsyapp, launch, release]
-image: /assets/images/budsy-logo.png
+image: /assets/img/budsy-app-icon.png
 ---
 We’re excited to announce the official launch of **budsyapp**, the modern solution for cannabis unit tracking and compliance!
 

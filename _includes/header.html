@@ -13,17 +13,29 @@
       </div>
 
       <!-- Desktop Navigation - CENTER/RIGHT -->
-      {%- if page_paths -%}
       <nav class="site-nav desktop-nav">
         <div class="nav-links">
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {%- endif -%}
-          {%- endfor -%}
+          <a class="page-link" href="{{ '/' | relative_url }}">Home</a>
+          <a class="page-link" href="{{ '/blog/' | relative_url }}">Blog</a>
+          <div class="download-trigger">
+            <a class="page-link" href="#downloads" onclick="toggleDownloadMenu(event)">
+              Download <span class="dropdown-arrow">▼</span>
+            </a>
+            
+            <!-- Download dropdown menu -->
+            <div class="download-dropdown" id="download-menu">
+              <a href="{{ '/ios-download/' | relative_url }}" class="download-link">
+                <span class="platform-icon">📱</span> iOS
+              </a>
+              <a href="#" class="download-link">
+                <span class="platform-icon">🤖</span> Android <small>(soon)</small>
+              </a>
+            </div>
+          </div>
+          <a class="page-link" href="{{ '/terms/' | relative_url }}">Terms</a>
+          <a class="page-link" href="{{ '/privacy/' | relative_url }}">Privacy</a>
           
-          <!-- Desktop Theme Toggle - INSIDE NAV LINKS -->
+          <!-- Desktop Theme Toggle -->
           <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
             <span id="theme-icon">🌙</span>
           </button>
@@ -32,12 +44,12 @@
 
       <!-- Mobile Navigation Controls - RIGHT SIDE -->
       <div class="mobile-nav-wrapper">
-        <!-- Mobile Theme Toggle -->
+        <!-- Mobile Theme Toggle FIRST -->
         <button id="theme-toggle-mobile" class="theme-toggle mobile-theme-toggle" onclick="toggleTheme()">
           <span id="theme-icon-mobile">🌙</span>
         </button>
         
-        <!-- Mobile Menu -->
+        <!-- Mobile Menu SECOND -->
         <nav class="site-nav mobile-nav">
           <input type="checkbox" id="nav-trigger" class="nav-trigger" />
           <label for="nav-trigger" class="nav-trigger-label">
@@ -50,16 +62,24 @@
 
           <!-- Mobile Menu Dropdown -->
           <div class="trigger">
-            {%- for path in page_paths -%}
-              {%- assign my_page = site.pages | where: "path", path | first -%}
-              {%- if my_page.title -%}
-              <a class="mobile-page-link" href="{{ my_page.url | relative_url }}" data-url="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-              {%- endif -%}
-            {%- endfor -%}
+            <a class="mobile-page-link" href="{{ '/' | relative_url }}" data-url="{{ '/' | relative_url }}">Home</a>
+            <a class="mobile-page-link" href="{{ '/blog/' | relative_url }}" data-url="{{ '/blog/' | relative_url }}">Blog</a>
+            <a class="mobile-page-link" href="{{ '/terms/' | relative_url }}" data-url="{{ '/terms/' | relative_url }}">Terms</a>
+            <a class="mobile-page-link" href="{{ '/privacy/' | relative_url }}" data-url="{{ '/privacy/' | relative_url }}">Privacy</a>
+            
+            <!-- Mobile Download Section -->
+            <div class="mobile-download-section">
+              <span class="mobile-section-header">Download</span>
+              <a class="mobile-page-link mobile-sub-link" href="{{ '/ios-download/' | relative_url }}" data-url="{{ '/ios-download/' | relative_url }}">
+                📱 iOS
+              </a>
+              <a class="mobile-page-link mobile-sub-link" href="#" data-url="#">
+                🤖 Android <small>(soon)</small>
+              </a>
+            </div>
           </div>
         </nav>
       </div>
-      {%- endif -%}
     </div>
 
     <!-- Launch Status -->
@@ -95,6 +115,13 @@ function navigateToPage(url) {
   
   // Navigate to the page
   window.location.href = url;
+}
+
+// Download dropdown functionality
+function toggleDownloadMenu(event) {
+  event.preventDefault();
+  const menu = document.getElementById('download-menu');
+  menu.classList.toggle('show');
 }
 
 // Load saved theme on page load
@@ -140,6 +167,18 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+  const downloadTrigger = document.querySelector('.download-trigger');
+  const downloadMenu = document.getElementById('download-menu');
+  
+  if (downloadTrigger && downloadMenu && 
+      !downloadTrigger.contains(event.target) && 
+      !downloadMenu.contains(event.target)) {
+    downloadMenu.classList.remove('show');
+  }
 });
 
 // Close mobile menu when clicking outside
