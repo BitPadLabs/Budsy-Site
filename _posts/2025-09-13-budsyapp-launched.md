@@ -2,7 +2,7 @@
 layout: post
 title: "budsyapp v1.5 Release: In App Store Review"
 date: 2025-09-13 09:00:00
-author: BitPadLabs Team
+author: Budsyapp Team
 categories: [product, release]
 tags: [budsyapp, release, update]
 image: /assets/img/budsy-app-icon.png

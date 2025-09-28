@@ -2,7 +2,7 @@
 layout: post
 title: "budsyapp Official Launch"
 date: 2025-09-02 09:00:00
-author: BitPadLabs Team
+author: Budsyapp Team
 categories: [product, release]
 tags: [budsyapp, launch, release]
 image: /assets/img/budsy-app-icon.png

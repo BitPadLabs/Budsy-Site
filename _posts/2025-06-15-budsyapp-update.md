@@ -2,7 +2,7 @@
 layout: post
 title: "budsyapp Development Update"
 date: 2025-06-15 14:00:00
-author: BitPadLabs Team
+author: Budsyapp Team
 categories: [product, update]
 tags: [budsyapp, cannabis, update]
 image: /assets/img/budsy-app-icon.png

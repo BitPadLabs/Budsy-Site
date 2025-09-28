@@ -2,7 +2,7 @@
 layout: post
 title: "Far & Dotter Patient Appreciation Day Recap"
 date: 2025-08-29 18:00:00
-author: BitPadLabs Team
+author: Budsyapp Team
 categories: [event, outreach]
 tags: [budsyapp, event, outreach, dispensary]
 image: /assets/img/events/2025-08-29-far-and-dotter.JPG
