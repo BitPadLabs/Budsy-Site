@@ -11,6 +11,7 @@ gallery:
   - /assets/img/events/2025-09-28-tea-and-terpenes.jpeg
   - /assets/img/events/2025-09-28-tea-and-terpenes-2.JPG
   - /assets/img/events/2025-09-28-tea-and-terpenes-3.jpeg
+  - /assets/img/events/2025-09-28-tea-and-terpenes-4.png
 ---
 
 **Today is the day!** 🌿☕
