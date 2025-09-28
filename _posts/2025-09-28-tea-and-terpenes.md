@@ -10,6 +10,7 @@ image: /assets/img/events/2025-09-28-tea-and-terpenes.jpeg
 gallery:
   - /assets/img/events/2025-09-28-tea-and-terpenes.jpeg
   - /assets/img/events/2025-09-28-tea-and-terpenes-2.JPG
+  - /assets/img/events/2025-09-28-tea-and-terpenes-3.jpeg
 ---
 
 **Today is the day!** 🌿☕
