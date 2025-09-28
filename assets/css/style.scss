@@ -1040,6 +1040,21 @@ body.dark-mode .launch-status-card {
    BLOG PAGE STYLES - BUDSY THEME (LIGHT/DARK)
    ============================================================================ */
 
+/* Blog and post page spacing */
+.section {
+  padding: 2rem 0; /* Extra spacing for blog pages */
+}
+
+/* Individual blog post spacing */
+.post-header,
+.post-content {
+  margin-bottom: 2rem;
+}
+
+.post-header {
+  margin-top: 2rem; /* Space from header */
+}
+
 /* Blog grid container */
 .blog-grid {
   display: grid;
@@ -1563,7 +1578,7 @@ input:focus, textarea:focus, select:focus {
    ============================================================================ */
 .page-content {
   background: var(--budsy-cream);
-  padding: 0;
+  padding: 2rem 0; /* Add top and bottom spacing for all pages */
   transition: background-color 0.2s ease;
 }
 
@@ -2015,6 +2030,19 @@ body.page-privacy .page-content a:hover {
   
   .redirect-info p {
     font-size: 15px;
+  }
+  
+  /* Mobile blog and page spacing */
+  .page-content {
+    padding: 1.5rem 0; /* Reduced spacing for mobile */
+  }
+  
+  .section {
+    padding: 1.5rem 0; /* Reduced spacing for mobile */
+  }
+  
+  .post-header {
+    margin-top: 1rem; /* Reduced spacing for mobile */
   }
 }
 
