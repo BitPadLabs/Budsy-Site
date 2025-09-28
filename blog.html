@@ -1,0 +1,31 @@
+---
+layout: default
+title: Blog & News
+---
+
+<section class="section">
+  <div class="container">
+    <h1 class="section-title">Blog & News</h1>
+    <p class="section-subtitle" style="color: var(--budsy-subtitle); font-size: 1.2rem;">Updates, tips, and announcements from the Budsy team.</p>
+    
+    <div class="blog-grid">
+      {% for post in site.posts %}
+      <div class="blog-post card">
+        <div class="post-image">
+          {% if post.image %}
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+          {% else %}
+            <img src="{{ '/assets/images/budsy-logo.png' | relative_url }}" alt="Budsy Blog">
+          {% endif %}
+        </div>
+        <div class="post-content">
+          <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+          <h3 style="color: var(--budsy-title);">{{ post.title }}</h3>
+          <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+          <a href="{{ post.url | relative_url }}" class="btn btn-third">Read More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
