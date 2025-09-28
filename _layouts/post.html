@@ -20,4 +20,74 @@ layout: default
   <div class="post-content">
     {{ content }}
   </div>
+
+  {% if page.gallery %}
+  <div class="post-gallery">
+    <h3 style="color: var(--budsy-title); text-align: center; margin-bottom: 2rem;">Event Gallery</h3>
+    
+    <div class="gallery-container">
+      <div class="gallery-slider">
+        {% for image in page.gallery %}
+        <div class="gallery-slide {% if forloop.first %}active{% endif %}">
+          <img src="{{ image | relative_url }}" alt="Event Photo {{ forloop.index }}" class="gallery-image">
+        </div>
+        {% endfor %}
+      </div>
+      
+      {% if page.gallery.size > 1 %}
+      <div class="gallery-controls">
+        <button class="gallery-btn prev-btn" onclick="changeSlide(-1)">❮</button>
+        <button class="gallery-btn next-btn" onclick="changeSlide(1)">❯</button>
+      </div>
+      
+      <div class="gallery-dots">
+        {% for image in page.gallery %}
+        <span class="gallery-dot {% if forloop.first %}active{% endif %}" onclick="currentSlide({{ forloop.index }})"></span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+
+    function changeSlide(n) {
+      showSlide(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlide(slideIndex = n);
+    }
+
+    function showSlide(n) {
+      let slides = document.getElementsByClassName("gallery-slide");
+      let dots = document.getElementsByClassName("gallery-dot");
+      
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
+      
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+      
+      if (slides[slideIndex - 1]) {
+        slides[slideIndex - 1].classList.add("active");
+      }
+      
+      if (dots[slideIndex - 1]) {
+        dots[slideIndex - 1].classList.add("active");
+      }
+    }
+
+    // Optional: Auto-advance slides every 5 seconds
+    setInterval(function() {
+      changeSlide(1);
+    }, 5000);
+  </script>
+  {% endif %}
 </article>

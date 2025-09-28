@@ -1129,6 +1129,129 @@ body.dark-mode .launch-status-card {
   margin-bottom: 0.5rem;
 }
 
+/* Post Gallery Slideshow Styles */
+.post-gallery {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--budsy-subtitle);
+}
+
+.gallery-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--budsy-card-background);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px var(--budsy-card-shadow);
+  overflow: hidden;
+}
+
+.gallery-slider {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.gallery-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-slide.active {
+  opacity: 1;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.gallery-btn {
+  background: rgba(137, 177, 83, 0.8);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  pointer-events: all;
+  z-index: 10;
+}
+
+.gallery-btn:hover {
+  background: var(--budsy-subtitle);
+  transform: scale(1.1);
+}
+
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: var(--budsy-card-background);
+  gap: 10px;
+}
+
+.gallery-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(137, 177, 83, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gallery-dot.active,
+.gallery-dot:hover {
+  background: var(--budsy-subtitle);
+  transform: scale(1.2);
+}
+
+/* Dark mode gallery styles */
+body.dark-mode .gallery-container {
+  background: var(--budsy-card-background);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .gallery-dots {
+  background: var(--budsy-card-background);
+}
+
+/* Mobile gallery responsive */
+@media (max-width: 768px) {
+  .gallery-slider {
+    height: 350px;
+  }
+  
+  .gallery-btn {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+  
+  .gallery-controls {
+    padding: 0 10px;
+  }
+}
+
 /* Blog grid container */
 .blog-grid {
   display: grid;

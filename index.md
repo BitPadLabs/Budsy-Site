@@ -76,7 +76,7 @@ title: Home
       </div>
       
       <div class="feature-card">
-        <h3>🔄 Data Export & Backup - coming soon</h3>
+        <h3>🔄 Data Export & Backup - partially implemented</h3>
         <p>Export your data for medical consultations or personal records. Create secure backups while maintaining privacy. Share insights with healthcare providers while keeping sensitive information protected.</p>
       </div>
     </div>
