@@ -1,0 +1,217 @@
+name: 🏪 Vendor Data Submission
+description: Submit information for a new dispensary or grower to be added to BudsyApp
+title: "[VENDOR] "
+labels: ["vendor-data", "dispensary", "grower", "needs-verification"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping expand BudsyApp's vendor database! Please provide complete and accurate information for the dispensary or grower you'd like to add.
+
+  - type: dropdown
+    id: vendor-type
+    attributes:
+      label: Vendor Type
+      description: What type of cannabis business is this?
+      options:
+        - Dispensary (Retail)
+        - Dispensary (Medical)
+        - Dispensary (Both Retail & Medical)
+        - Cultivator/Grower
+        - Processor/Manufacturer
+        - Testing Laboratory
+        - Delivery Service
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: business-name
+    attributes:
+      label: Business Name
+      description: Official legal name of the business
+      placeholder: "e.g., Green Valley Cannabis Co."
+    validations:
+      required: true
+
+  - type: input
+    id: dba-name
+    attributes:
+      label: DBA/Trade Name
+      description: "Doing Business As" name or common trade name (if different from legal name)
+      placeholder: "e.g., Valley Green Dispensary"
+
+  - type: textarea
+    id: address
+    attributes:
+      label: Physical Address
+      description: Complete street address of the business location
+      placeholder: |
+        Street Address:
+        City:
+        State:
+        ZIP Code:
+        Country:
+    validations:
+      required: true
+
+  - type: input
+    id: phone
+    attributes:
+      label: Phone Number
+      description: Primary contact phone number
+      placeholder: "(555) 123-4567"
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Email Address
+      description: Primary contact email address
+      placeholder: "contact@example.com"
+
+  - type: input
+    id: website
+    attributes:
+      label: Website URL
+      description: Official business website (if available)
+      placeholder: "https://www.example.com"
+
+  - type: textarea
+    id: social-media
+    attributes:
+      label: Social Media
+      description: Social media accounts (Instagram, Facebook, etc.)
+      placeholder: |
+        Instagram: @username
+        Facebook: facebook.com/pagename
+        Twitter: @username
+
+  - type: textarea
+    id: licenses
+    attributes:
+      label: License Information
+      description: Cannabis business license numbers and issuing authorities
+      placeholder: |
+        License Type: [e.g., Retail, Cultivation, Manufacturing]
+        License Number: [e.g., C11-0000123-LIC]
+        Issuing Authority: [e.g., California Department of Cannabis Control]
+        Issue Date:
+        Expiration Date:
+    validations:
+      required: true
+
+  - type: textarea
+    id: operating-hours
+    attributes:
+      label: Operating Hours
+      description: Business hours for each day of the week
+      placeholder: |
+        Monday: 9:00 AM - 9:00 PM
+        Tuesday: 9:00 AM - 9:00 PM
+        Wednesday: 9:00 AM - 9:00 PM
+        Thursday: 9:00 AM - 9:00 PM
+        Friday: 9:00 AM - 10:00 PM
+        Saturday: 9:00 AM - 10:00 PM
+        Sunday: 10:00 AM - 8:00 PM
+
+  - type: checkboxes
+    id: services
+    attributes:
+      label: Services Offered
+      description: What services does this vendor provide?
+      options:
+        - label: Recreational Sales
+        - label: Medical Sales
+        - label: Online Ordering
+        - label: Curbside Pickup
+        - label: Delivery Service
+        - label: Consultation Services
+        - label: Lab Testing
+        - label: Wholesale
+        - label: Custom Processing
+
+  - type: textarea
+    id: product-categories
+    attributes:
+      label: Product Categories
+      description: What types of cannabis products does this vendor offer?
+      placeholder: |
+        Check all that apply:
+        - Flower/Bud
+        - Pre-rolls
+        - Concentrates/Extracts
+        - Edibles
+        - Beverages
+        - Topicals
+        - Tinctures
+        - Vape Cartridges
+        - Seeds/Clones
+        - Accessories
+        - Other (specify)
+
+  - type: input
+    id: year-established
+    attributes:
+      label: Year Established
+      description: What year was this business established?
+      placeholder: "2020"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Business Description
+      description: Brief description of the business, specialties, or unique features
+      placeholder: "Describe what makes this vendor special..."
+
+  - type: input
+    id: owner-operator
+    attributes:
+      label: Owner/Operator
+      description: Name of owner or primary operator (optional)
+      placeholder: "John Smith"
+
+  - type: dropdown
+    id: verification-status
+    attributes:
+      label: Information Source
+      description: How did you obtain this information?
+      options:
+        - I am the owner/operator of this business
+        - I am an employee of this business
+        - I am a customer who visited this business
+        - Public business directory/website
+        - Regulatory database
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any other relevant information about this vendor
+
+  - type: textarea
+    id: verification-notes
+    attributes:
+      label: Verification Notes
+      description: Any supporting documentation or notes to help verify this information
+      placeholder: "Links to regulatory databases, business registration, etc."
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Data Accuracy & Terms
+      options:
+        - label: I confirm that all provided information is accurate to the best of my knowledge
+          required: true
+        - label: I understand this information will be verified before being added to BudsyApp
+          required: true
+        - label: I have permission to submit this business information (if not the owner)
+          required: true
+        - label: I agree that this information may be made publicly available in BudsyApp
+          required: true

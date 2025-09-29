@@ -1,0 +1,167 @@
+name: 📚 Educational Content Addition
+description: Propose new educational content for BudsyApp or the website
+title: "[EDUCATION] "
+labels: ["education", "content", "needs-review"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to BudsyApp's educational mission! Please provide detailed information about the educational content you'd like to add.
+
+  - type: dropdown
+    id: content-type
+    attributes:
+      label: Content Type
+      description: What type of educational content are you proposing?
+      options:
+        - Strain Information
+        - Cannabis Science/Research
+        - Consumption Methods
+        - Growing/Cultivation
+        - Legal Information
+        - Health & Wellness
+        - Industry News/Trends
+        - Glossary/Definitions
+        - How-to Guide
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-audience
+    attributes:
+      label: Target Audience
+      description: Who is the primary audience for this content?
+      options:
+        - Beginners/New Users
+        - Intermediate Users
+        - Advanced/Experienced Users
+        - Medical Patients
+        - Recreational Users
+        - Industry Professionals
+        - All Users
+    validations:
+      required: true
+
+  - type: textarea
+    id: topic
+    attributes:
+      label: Topic/Title
+      description: What is the main topic or title of this educational content?
+      placeholder: "e.g., Understanding Terpenes and Their Effects"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Content Description
+      description: Provide a detailed description of the educational content you want to add.
+      placeholder: "Explain what information this content would cover..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: key-points
+    attributes:
+      label: Key Learning Points
+      description: What are the main things users should learn from this content?
+      placeholder: |
+        - Users will learn...
+        - They will understand...
+        - This will help them...
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Preferred Format
+      description: How should this content be presented?
+      options:
+        - Article/Blog Post
+        - Infographic
+        - Video Content
+        - Interactive Guide
+        - FAQ Section
+        - Glossary Entry
+        - Data Visualization
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources & References
+      description: Please provide credible sources, research papers, or references for this content.
+      placeholder: |
+        - Scientific studies
+        - Industry reports  
+        - Expert interviews
+        - Regulatory documents
+        - Other reliable sources
+
+  - type: dropdown
+    id: accuracy-level
+    attributes:
+      label: Content Accuracy Requirements
+      description: What level of fact-checking is needed?
+      options:
+        - Medical/Scientific (requires peer-reviewed sources)
+        - Legal (requires current regulatory verification)
+        - Industry Standard (requires industry expert review)
+        - General Educational (requires credible sources)
+    validations:
+      required: true
+
+  - type: textarea
+    id: integration
+    attributes:
+      label: App Integration
+      description: How would this content integrate with existing BudsyApp features?
+      placeholder: "This could be linked to strain profiles, added to the education section, etc..."
+
+  - type: textarea
+    id: existing-content
+    attributes:
+      label: Related Existing Content
+      description: Is there existing content in BudsyApp that this would complement or replace?
+
+  - type: textarea
+    id: visual-elements
+    attributes:
+      label: Visual Elements
+      description: What images, charts, or visual aids would enhance this content?
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority/Impact
+      description: How important is this educational content?
+      options:
+        - High (addresses common user questions/needs)
+        - Medium (valuable addition to knowledge base)
+        - Low (nice-to-have information)
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other relevant information about this educational content proposal.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Content Guidelines
+      options:
+        - label: I commit to providing accurate, science-based information
+          required: true
+        - label: I will cite credible sources for all claims made
+          required: true
+        - label: This content aligns with BudsyApp's educational mission
+          required: true
+        - label: I understand this content may require expert review before publication
+          required: true
