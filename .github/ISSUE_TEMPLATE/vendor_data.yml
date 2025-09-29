@@ -40,7 +40,7 @@ body:
     id: dba-name
     attributes:
       label: DBA/Trade Name
-      description: "Doing Business As" name or common trade name (if different from legal name)
+      description: 'Doing Business As name or common trade name (if different from legal name)'
       placeholder: "e.g., Valley Green Dispensary"
 
   - type: textarea
