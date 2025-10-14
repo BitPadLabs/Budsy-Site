@@ -15,6 +15,8 @@ This is the official website repository for **BudsyApp** - a medical marijuana t
 - **Hosting**: GitHub Pages
 - **Ruby Version**: 2.6.0+ (compatible with Ruby 3.4+)
 - **Deployment**: Automated via GitHub Actions
+- **Plugins**: jekyll-feed, jekyll-sitemap, jekyll-seo-tag
+- no em dashes in blog posts
 
 ## Site Structure
 
