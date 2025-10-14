@@ -10,6 +10,7 @@ image: /assets/img/budsy-app-icon.png
 We’re excited to announce the official launch of **budsyapp**, the modern solution for cannabis unit tracking and compliance!
 
 **What is budsyapp?**
+
 budsyapp is designed to help cultivators, processors, and dispensaries manage inventory, stay compliant, and streamline operations with ease. Built with real-world feedback, budsyapp offers:
 
 - Intuitive unit tracking for every stage of the cannabis lifecycle
@@ -23,6 +24,7 @@ budsyapp is designed to help cultivators, processors, and dispensaries manage in
 - Backed by the BitPadLabs commitment to clean, scalable technology
 
 **Get Started:**
+
 Ready to see budsyapp in action? Visit [budsyapp.com](https://budsyapp.com) to learn more.
 
 Thank you for supporting BitPadLabs and helping us build tools that make a difference!
