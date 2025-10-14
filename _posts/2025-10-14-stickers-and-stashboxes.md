@@ -9,7 +9,7 @@ excerpt: "Picked out a few new stickers from some of our favorite brands to add 
 image: /assets/img/events/2025-10-14-stashbox-with-stickers.jpeg
 gallery:
   - /assets/img/events/2025-10-14-stashbox-with-stickers.jpeg
-  - /assets/img/events/2025-10-14-budsyapp-ipad-sticker.PNG
+  - /assets/img/events/2025-10-14-budsyapp-ipad-sticker.jpeg
 ---
 
 # Stashbox Makeover! 🎨✨
