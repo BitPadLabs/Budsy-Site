@@ -13,7 +13,12 @@
             <a class="u-email" href="mailto:{{ site.email }}" style="font-size: 1rem; color: var(--budsy-title); margin-bottom: 0.7rem; text-decoration: none; font-weight: 500;">{{ site.email }}</a>
           {%- endif -%}
           <a href="{{ '/privacy/' | relative_url }}" style="color: var(--budsy-text); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.9rem; transition: color 0.3s ease;">Privacy Policy</a>
-          <a href="{{ '/terms/' | relative_url }}" style="color: var(--budsy-text); text-decoration: none; margin-bottom: 1.5rem; font-size: 0.9rem; transition: color 0.3s ease;">Terms of Service</a>
+          <a href="{{ '/terms/' | relative_url }}" style="color: var(--budsy-text); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.9rem; transition: color 0.3s ease;">Terms of Service</a>
+          <div style="display: flex; gap: 0.75rem; margin-bottom: 1rem; justify-content: center;">
+            <a href="{{ '/ios-download/' | relative_url }}" style="color: var(--budsy-text); text-decoration: none; font-size: 0.85rem; transition: color 0.3s ease;">📱 iOS</a>
+            <span style="color: var(--budsy-text); opacity: 0.5;">|</span>
+            <a href="{{ '/play-download/' | relative_url }}" style="color: var(--budsy-text); text-decoration: none; font-size: 0.85rem; transition: color 0.3s ease;">🤖 Android</a>
+          </div>
           <img src="{{ '/assets/img/budsy-app-icon.png' | relative_url }}" alt="budsyapp" style="width: 60px; height: 60px; border-radius: 12px; box-shadow: 0 4px 12px rgba(137,177,83,0.2);" />
         </div>
 

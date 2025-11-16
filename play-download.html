@@ -1,0 +1,80 @@
+---
+layout: default
+title: Android
+description: Download the latest version of BudsyApp for Android - Your cannabis tracking companion
+permalink: /play-download/
+---
+
+<div class="download-page">
+        <div class="download-logo">
+            <img src="/assets/img/budsy-app-icon.png" alt="Budsy App Icon" style="width: 80px; height: 80px; border-radius: 16px; box-shadow: 0 4px 12px rgba(137,177,83,0.18);" />
+        </div>
+    
+    <h1 class="download-title">Opening budsyapp...</h1>
+    
+    <div class="loading-spinner"></div>
+    
+    <p class="download-subtitle">
+        Taking you to the Google Play Store to download the latest version of your bud tracking buddy!
+    </p>
+    
+    <div class="redirect-info">
+        <p id="countdown-text">
+            <strong>Redirecting automatically in 2 seconds...</strong>
+        </p>
+        
+        <a href="https://play.google.com/store/apps/details?id=com.bitpadlabs.budsyapp" 
+           class="app-store-button" 
+           id="playStoreLink">
+            Open Google Play Now
+        </a>
+    </div>
+    
+    <div class="budsy-footer">
+        <p><strong>budsyapp</strong> - Your better bud buddy</p>
+        <p>Log your cannabis purchases and stay compliant with state limits</p>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let countdown = 4;
+    const countdownElement = document.getElementById('countdown-text');
+    
+    // Update countdown display
+    const countdownInterval = setInterval(function() {
+        countdown--;
+        if (countdown > 0) {
+            countdownElement.innerHTML = `<strong>Redirecting automatically in ${countdown} second${countdown !== 1 ? 's' : ''}...</strong>`;
+        } else {
+            countdownElement.innerHTML = '<strong>Redirecting now...</strong>';
+            clearInterval(countdownInterval);
+        }
+    }, 1000);
+    
+    // Auto-redirect after 2 seconds
+    setTimeout(function() {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.bitpadlabs.budsyapp";
+        
+        // Analytics tracking if available
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'auto_play_store_redirect', {
+                'event_category': 'app_download',
+                'event_label': 'android_automatic_redirect',
+                'value': 1
+            });
+        }
+    }, 4000);
+    
+    // Manual button click tracking
+    document.getElementById('playStoreLink').addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'manual_play_store_click', {
+                'event_category': 'app_download',
+                'event_label': 'android_manual_click',
+                'value': 1
+            });
+        }
+    });
+});
+</script>
