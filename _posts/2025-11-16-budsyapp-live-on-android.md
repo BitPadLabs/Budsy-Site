@@ -25,15 +25,13 @@ This soft launch means more people can log their medical cannabis purchases, lea
 - Keep your history private and organized 🔒
 - Customize your app to your preferred settings 🩷
 
----
-
 <div style="text-align:center; margin:1.5rem 0;">
 	<div style="margin-bottom:14px;">
 		<a href="https://budsyapp.com/play-download/" aria-label="Get budsyapp on Google Play" style="display:inline-block;background:#89b153;color:#ffffff;padding:14px 22px;border-radius:8px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(137,177,83,0.18);">Get budsyapp on Google Play ▶︎</a>
 	</div>
-	
-[Download here for iOS!](https://budsyapp.com/ios-download/)
-
+	<div style="margin-bottom:14px;">
+		<a href="https://budsyapp.com/ios-download/" aria-label="Get budsyapp on iOS">Get budsyapp on iOS</a>
+	</div>
 </div>
 
 We're incredibly grateful to our community for the support that made this launch possible. Thank you to everyone who tested, and gave feedback.✨
