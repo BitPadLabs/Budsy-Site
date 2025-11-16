@@ -17,7 +17,7 @@ We're excited to announce that as of this morning **budsyapp is now available on
 
 This soft launch means more people can log their medical cannabis purchases, learn about products, and stay connected with the budsyapp community, all from their Android device.✨
 
-# What you can do with budsyapp on Android
+## What you can do with budsyapp on Android
 
 - Log purchases easily 🧾
 - Save product notes and personal reactions 📝
@@ -31,12 +31,10 @@ This soft launch means more people can log their medical cannabis purchases, lea
 	<div style="margin-bottom:14px;">
 		<a href="https://budsyapp.com/play-download/" aria-label="Get budsyapp on Google Play" style="display:inline-block;background:#89b153;color:#ffffff;padding:14px 22px;border-radius:8px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(137,177,83,0.18);">Get budsyapp on Google Play ▶︎</a>
 	</div>
-	<div>
-		<a href="https://budsyapp.com/ios-download/" aria-label="Get budsyapp on the App Store" style="display:inline-block;background:#89b153;color:#ffffff;padding:14px 22px;border-radius:8px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(137,177,83,0.18);">Get budsyapp on the App Store</a>
-	</div>
-</div>
+	
+[Download here for iOS!](https://budsyapp.com/ios-download/)
 
----
+</div>
 
 We're incredibly grateful to our community for the support that made this launch possible. Thank you to everyone who tested, and gave feedback.✨
 
@@ -47,5 +45,6 @@ We will continue to roll out updates and new features in the coming months, firs
 To our beta testers, thank you for your invaluable feedback and support, please continue to monitor your email for updates and instructions as we refine the app experience.🩷
 
 **Download, explore, and enjoy your wellness journey - see you in the Play Store!**
+
 
 ✨ The budsyapp team ✨
