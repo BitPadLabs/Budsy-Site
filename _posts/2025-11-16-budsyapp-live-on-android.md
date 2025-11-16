@@ -32,7 +32,7 @@ This soft launch means more people can log their medical cannabis purchases, lea
 		<a href="https://budsyapp.com/play-download/" aria-label="Get budsyapp on Google Play" style="display:inline-block;background:#89b153;color:#ffffff;padding:14px 22px;border-radius:8px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(137,177,83,0.18);">Get budsyapp on Google Play ▶︎</a>
 	</div>
 	<div>
-		<a href="https://budsyapp.com/ios-download/" aria-label="Get budsyapp on the App Store" style="display:inline-block;background:#89b153;color:#ffffff;padding:14px 22px;border-radius:8px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(137,177,83,0.18);">Get budsyapp on the App Store </a>
+		<a href="https://budsyapp.com/ios-download/" aria-label="Get budsyapp on the App Store" style="display:inline-block;background:#89b153;color:#ffffff;padding:14px 22px;border-radius:8px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(137,177,83,0.18);">Get budsyapp on the App Store</a>
 	</div>
 </div>
 
