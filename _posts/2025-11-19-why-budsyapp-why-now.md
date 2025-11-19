@@ -63,8 +63,6 @@ budsyapp will continue expanding, improving, and creating tools that make cannab
 *🩷 your better bud buddy*
 & the budsyapp team
 
----
-
 ⚠️ budsyapp does not sell cannabis, and budsyapp does not encourage anyone to break the law. our goal is to support thoughtful and informed decision making through education and community engagement. ⚠️
 
 #nfsot #educationonly #hemplaws #2018farmbill #budsyapp
