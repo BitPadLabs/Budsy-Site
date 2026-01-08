@@ -58,15 +58,11 @@ president biden publicly directed the secretary of hhs and the attorney general 
 **real-world example:**  
 this is the moment the federal “re-evaluation” officially kicked off and agencies started building the record.
 
----
-
 ### 2 - hhs completed its scientific and medical review and recommended schedule iii (august 29, 2023) ✅
 hhs sent dea a formal recommendation that marijuana should be placed into schedule iii, based on the required medical and scientific evaluation.
 
 **real-world example:**  
 think of this as the “science file” that helps inform the rest of the process.
-
----
 
 ### 3 - doj/dea moved the process into formal rulemaking (may 2024) ✅
 the justice department submitted a notice of proposed rulemaking (nprm), which is the official rulemaking mechanism that starts the public regulatory process.
@@ -77,15 +73,11 @@ this is still a proposal stage. until a final rule is published, federal schedul
 **real-world example:**  
 this is the stage where you begin seeing the official proposal discussed in terms of the federal register, public comments, and administrative procedure.
 
----
-
 ### 4 - public comments were collected and the comment period ended (july 22, 2024) ✅
 the comment window closed on july 22, 2024. those comments become part of the official record that dea must consider.
 
 **real-world example:**  
 patients, clinicians, advocacy organizations, researchers, and industry groups submit comments describing impacts, concerns, and what they want clarified.
-
----
 
 ### 5 - dea announced a hearing process, then the merits hearing was cancelled and the case stayed (january 2025) ✅ / ⏸️
 the merits hearing was scheduled to begin january 21, 2025, but the administrative law judge cancelled the hearing and stayed the proceedings due to an interlocutory appeal.
@@ -95,15 +87,11 @@ short version: the process hit a procedural roadblock.
 ### 6 - the rescheduling matter remained in a stay status (july 23, 2025 notice) ⏸️
 in a notice to the parties dated july 23, 2025, the presiding administrative law judge stated the case was still in a stay status pending resolution of the interlocutory appeal.
 
----
-
 ### 7 - executive action directed agencies to expedite completion of the process (december 18, 2025) ✅
 an executive order directed the attorney general to take steps to complete the rulemaking process related to rescheduling marijuana to schedule iii as expeditiously as allowed by law.
 
 **important clarification:**  
 this executive order directs action. it does not, by itself, publish a final rule or flip the schedule overnight.
-
----
 
 ## where things stand right now (as of january 7, 2026)
 we are past the “science review” and “proposal” stages, and past the initial comment period.
@@ -115,8 +103,6 @@ the biggest open items are:
 
 as of this update, marijuana is still treated as a schedule i substance federally unless and until a final rule is published and becomes effective.
 
----
-
 ## what has not happened yet
 
 ### final rule published in the federal register ❌
@@ -127,8 +113,6 @@ after a final rule, agencies, states, and regulated industries have to interpret
 
 ### post-final court challenges (if any) ❌
 lawsuits can follow final agency action and can affect timelines.
-
----
 
 ## what schedule iii could change
 
@@ -149,8 +133,6 @@ schedule iii would still be a controlled status. state programs do not automatic
 
 **example:**  
 you could still see conflicts between federal rules and state-legal operations unless congress passes broader reforms.
-
----
 
 ## myth checks
 
